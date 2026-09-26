@@ -1,0 +1,52 @@
+ProductName:	macOS
+ProductVersion:	12.6.7
+BuildVersion:	21G651
+Graphics/Displays:
+
+    AMD Radeon RX 640:
+
+      Chipset Model: AMD Radeon RX 640
+      Type: GPU
+      Bus: PCIe
+      PCIe Lane Width: x8
+      VRAM (Total): 4 GB
+      Vendor: AMD (0x1002)
+      Device ID: 0x6987
+      Revision ID: 0x00c1
+      Metal: Supported
+      Displays:
+        SE2717H/HX:
+          Resolution: 1920 x 1080 (1080p FHD - Full High Definition)
+          UI Looks like: 1920 x 1080 @ 60.00Hz
+          Framebuffer Depth: 30-Bit Color (ARGB2101010)
+          Display Serial Number: REDACTED
+          Main Display: Yes
+          Mirror: Off
+          Online: Yes
+          Rotation: Supported
+
+19 AAA.LoadEarly.MouSSE (0.95)
+53 as.vit9696.Lilu (1.7.2)
+54 as.vit9696.WhateverGreen (1.7.0)
+104 com.apple.kext.AMDSupport (4.0.8)
+105 com.apple.kext.AMD9500Controller (4.0.8)
+162 com.apple.kext.AMDRadeonServiceManager (4.0.8)
+163 com.apple.kext.AMDRadeonX4000HWServices (4.0.8)
+165 com.apple.kext.AMDRadeonX4000 (4.0.8)
+166 com.apple.kext.AMDRadeonX4000HWLibs (1.0)
+167 com.apple.kext.AMDFramebuffer (4.0.8)
++-o AMDRadeonX4000_AMDBaffinGraphicsAccelerator  <class AMDRadeonX4000_AMDBaffinGraphicsAccelerator, id 0x100000389, registered, matched, active, busy 0 (22 ms), retain 26>
+  +-o AMDRadeonX4000_AMDAccel2DContext  <class AMDRadeonX4000_AMDAccel2DContext, id 0x1000003d8, !registered, !matched, active, busy 0, retain 6>
+  |   "IOFBDependentIndex" = 0
+  +-o display0  <class IODisplayConnect, id 0x10000042f, registered, matched, active, busy 0 (1 ms), retain 6>
+  |   "IOFBDependentIndex" = 1
+  |   "IOFBDependentIndex" = 2
+      "connector-count" = <03000000>
+      "revision-id" = <c1000000>
+      "model" = <"AMD Radeon RX 640">
+      "device-id" = <87690000>
+2026-09-26 01:26:39.887 Df WindowServer[154:2cc] [com.apple.SkyLight:default] Metal compositor activated.
+WhateverGreen       rad: @ (DBG) starting controller 0xFFFFFF9B6C2A8540
+WhateverGreen       rad: @ (DBG) getConnectorsInfo installed 3 connectors
+WhateverGreen       rad: @ (DBG) getConnectorsInfo resulting 3 connectors follow
+WhateverGreen       rad: @ (DBG) starting controller done 1 0xFFFFFF9B6C2A8540

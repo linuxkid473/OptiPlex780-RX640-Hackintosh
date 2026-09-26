@@ -1,0 +1,116 @@
+2026-09-26 01:25:44.683 Df kernel[0:6f] AAA_LoadEarly_MouSSE::probe(ACPI)
+2026-09-26 01:25:44.965 Df kernel[0:6f] AAA_LoadEarly_MouSSE::start(iMacPro1,1) <1>
+2026-09-26 01:26:32.273 Df kernel[0:614] iMacPro1,1: match category AAA_LoadEarly_MouSSE exists
+2026-09-26 01:26:33.787 Df kernel[0:659] (AMDSupport) Accelerator successfully registered with controller.
+2026-09-26 01:26:35.360 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <52343770915>
+2026-09-26 01:26:35.360 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52343786471> taking <15556> ns
+2026-09-26 01:26:35.594 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <52577987925>
+2026-09-26 01:26:35.594 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52577994955> taking <7030> ns
+2026-09-26 01:26:35.595 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <52579028753>
+2026-09-26 01:26:35.595 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52579036486> taking <7733> ns
+2026-09-26 01:26:35.595 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <40> at <52579054497>
+2026-09-26 01:26:35.595 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52579059335> taking <4838> ns
+2026-09-26 01:26:35.596 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <52579334129>
+2026-09-26 01:26:35.596 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52579338328> taking <4199> ns
+2026-09-26 01:26:35.597 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <52580325234>
+2026-09-26 01:26:35.597 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52580331888> taking <6654> ns
+2026-09-26 01:26:35.597 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <40> at <52580350095>
+2026-09-26 01:26:35.597 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52580354381> taking <4286> ns
+2026-09-26 01:26:35.597 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <52580376001>
+2026-09-26 01:26:35.597 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52580462776> taking <86775> ns
+2026-09-26 01:26:35.597 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <40> at <52580483103>
+2026-09-26 01:26:35.597 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52580487249> taking <4146> ns
+2026-09-26 01:26:35.603 Df kernel[0:2cc] (AMDRadeonX4000) [1:0:0]: Controller is enabled, finish initialization
+2026-09-26 01:26:35.603 Df kernel[0:74] PMRD: AMDFramebufferVIB tag flags 200
+2026-09-26 01:26:35.603 Df kernel[0:74] PMRD: AMDFramebufferVIB tag flags 200
+2026-09-26 01:26:35.603 Df kernel[0:74] PMRD: AMDFramebufferVIB tag flags 200
+2026-09-26 01:26:35.666 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <91> at <52649773363>
+2026-09-26 01:26:35.666 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52649790351> taking <16988> ns
+2026-09-26 01:26:35.666 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <93> at <52649821160>
+2026-09-26 01:26:35.666 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52649826073> taking <4913> ns
+2026-09-26 01:26:35.695 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <91> at <52678742545>
+2026-09-26 01:26:35.695 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52678755940> taking <13395> ns
+2026-09-26 01:26:35.695 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <93> at <52678778955>
+2026-09-26 01:26:35.695 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52678783072> taking <4117> ns
+2026-09-26 01:26:35.710 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <91> at <52694130419>
+2026-09-26 01:26:35.710 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52694142528> taking <12109> ns
+2026-09-26 01:26:35.710 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <93> at <52694165220>
+2026-09-26 01:26:35.710 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52694169385> taking <4165> ns
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <90> at <52968493097>
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52968508996> taking <15899> ns
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <92> at <52968561169>
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52968574774> taking <13605> ns
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <90> at <52968638778>
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52968645165> taking <6387> ns
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <92> at <52968677093>
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52968681473> taking <4380> ns
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <90> at <52968714161>
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52968720131> taking <5970> ns
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <92> at <52968750503>
+2026-09-26 01:26:35.985 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <52968754853> taking <4350> ns
+2026-09-26 01:26:40.301 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <57533427978>
+2026-09-26 01:26:40.305 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <57537261276> taking <3833298> ns
+2026-09-26 01:26:40.307 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <57539442333>
+2026-09-26 01:26:40.307 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <57539453607> taking <11274> ns
+2026-09-26 01:26:40.307 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <57539591047>
+2026-09-26 01:26:40.307 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <57539596299> taking <5252> ns
+2026-09-26 01:26:40.308 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <57539639356>
+2026-09-26 01:26:40.308 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <57539644006> taking <4650> ns
+2026-09-26 01:26:40.308 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <57539733671>
+2026-09-26 01:26:40.308 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <57539739480> taking <5809> ns
+2026-09-26 01:26:40.337 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <57568788692>
+2026-09-26 01:26:40.337 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <57568961903> taking <173211> ns
+2026-09-26 01:26:40.337 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <40> at <57569007734>
+2026-09-26 01:26:40.337 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <57569011986> taking <4252> ns
+2026-09-26 01:26:40.353 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <57585006138>
+2026-09-26 01:26:40.353 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <57585078796> taking <72658> ns
+2026-09-26 01:26:40.353 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <57585322596>
+2026-09-26 01:26:40.353 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <57585464863> taking <142267> ns
+2026-09-26 01:26:41.683 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <58914764864>
+2026-09-26 01:26:41.683 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <58914880270> taking <115406> ns
+2026-09-26 01:26:41.683 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <58915145977>
+2026-09-26 01:26:41.683 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <58915295601> taking <149624> ns
+2026-09-26 01:26:41.791 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <59023062946>
+2026-09-26 01:26:41.791 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59023159803> taking <96857> ns
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <59030755039>
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59030871418> taking <116379> ns
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <40> at <59030894975>
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59030900403> taking <5428> ns
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <59030976321>
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59031001358> taking <25037> ns
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <59031096076>
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59031162994> taking <66918> ns
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <59031204328>
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59031214373> taking <10045> ns
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <59031309381>
+2026-09-26 01:26:41.799 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59031374193> taking <64812> ns
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <91> at <59036214093>
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59036233149> taking <19056> ns
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <93> at <59036297146>
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59036302112> taking <4966> ns
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <91> at <59036335330>
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59036341488> taking <6158> ns
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <93> at <59036393646>
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59036398123> taking <4477> ns
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <91> at <59036430559>
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59036436454> taking <5895> ns
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <93> at <59036466172>
+2026-09-26 01:26:41.804 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59036470800> taking <4628> ns
+2026-09-26 01:26:42.301 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <59533245274>
+2026-09-26 01:26:42.302 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59534466662> taking <1221388> ns
+2026-09-26 01:26:42.305 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <59536785042>
+2026-09-26 01:26:42.305 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59536794926> taking <9884> ns
+2026-09-26 01:26:42.305 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <59536915441>
+2026-09-26 01:26:42.305 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59536920012> taking <4571> ns
+2026-09-26 01:26:42.305 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <59536975249>
+2026-09-26 01:26:42.305 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59536979843> taking <4594> ns
+2026-09-26 01:26:42.305 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <59537076843>
+2026-09-26 01:26:42.305 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59537081291> taking <4448> ns
+2026-09-26 01:26:42.381 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <59613090696>
+2026-09-26 01:26:42.381 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59613288177> taking <197481> ns
+2026-09-26 01:26:42.381 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <40> at <59613335861>
+2026-09-26 01:26:42.381 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59613340237> taking <4376> ns
+2026-09-26 01:26:42.396 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <1> at <59628496693>
+2026-09-26 01:26:42.396 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59628589039> taking <92346> ns
+2026-09-26 01:26:42.465 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) event = <2> at <59697179337>
+2026-09-26 01:26:42.465 F  kernel[0:2cc] (IOAcceleratorFamily2) IOReturn IOAccelDisplayPipe::display_change_handler(void *, IOFramebuffer *, IOIndex, void *) completed at <59697464615> taking <285278> ns

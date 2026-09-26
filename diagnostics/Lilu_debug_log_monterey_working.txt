@@ -1,0 +1,1028 @@
+Lilu    config: @ (DBG) version DBG-172-2026-03-20 (x86_64), args: disabled 0, debug 1, slow 0, decompress 1
+Lilu       dev: @ (DBG) got iMacPro1,1 model from /efi/platform
+Lilu       dev: @ (DBG) got Mac-7BA5B2D9E42DDD94 board-id from /efi/platform
+Lilu    config: @ (DBG) initialising policy
+Lilu     iokit: @ (DBG) OSPrelinkKextCount equals to 5
+Lilu      mach: @ (DBG) MachInfo asKernel 1 object constructed
+Lilu      mach: @ (DBG) found kernel nouveau mach-o header address at ffffff800fa00000
+Lilu      mach: @ (DBG) memory init mode - 1
+Lilu      mach: @ (DBG) looking up inner kernel in 901 commands at 0xFFFFFF800FA00000
+Lilu      mach: @ (DBG) got nouveau mach-o for kernel at 0xFFFFFF800FA10000
+Lilu      mach: @ (DBG) kernel has segment is __TEXT from 0xFFFFFF800FA10000 to 0xFFFFFF8010410000
+Lilu      mach: @ (DBG) Potential slots: 0xFFFFFF800FA11398 - 0xFFFFFF800FA1A000 : 0xFFFFFF801040FDF8 - 0xFFFFFF8010410000
+Lilu      mach: @ (DBG) activating slots for kernel in 0xFFFFFF800FA11398 - 0xFFFFFF800FA1A000
+Lilu      mach: @ (DBG) kernel has segment is __DATA from 0xFFFFFF8010884000 to 0xFFFFFF8010B1B000
+Lilu      mach: @ (DBG) kernel has segment is __DATA_CONST from 0xFFFFFF8010424000 to 0xFFFFFF80104AC000
+Lilu      mach: @ (DBG) kernel has segment is __KLDDATA from 0xFFFFFF8010B1B000 to 0xFFFFFF8010B5E000
+Lilu      mach: @ (DBG) kernel has segment is __HIB from 0xFFFFFF800F900000 to 0xFFFFFF800F9A0000
+Lilu      mach: @ (DBG) kernel has segment is __VECTORS from 0xFFFFFF8010B5E000 to 0xFFFFFF8010B5F000
+Lilu      mach: @ (DBG) kernel has segment is __KLD from 0xFFFFFF8010410000 to 0xFFFFFF8010423000
+Lilu      mach: @ (DBG) kernel has segment is __LASTDATA_CONST from 0xFFFFFF80104AC000 to 0xFFFFFF80104AD000
+Lilu      mach: @ (DBG) kernel has segment is __LAST from 0xFFFFFF8010B5F000 to 0xFFFFFF8010B5F000
+Lilu      mach: @ (DBG) kernel has segment is __PRELINK_TEXT from 0xFFFFFF8010423000 to 0xFFFFFF8010423000
+Lilu      mach: @ (DBG) kernel has segment is __PRELINK_INFO from 0xFFFFFF8013DFD000 to 0xFFFFFF8014192000
+Lilu      mach: @ (DBG) kernel has segment is __LINKINFO from 0xFFFFFF8012F84000 to 0xFFFFFF8012FCB000
+Lilu      mach: @ (DBG) kernel has segment is __CTF from 0xFFFFFF800FA10000 to 0xFFFFFF800FA10000
+Lilu      mach: @ (DBG) kernel has segment is __LINKEDIT from 0xFFFFFF8013014000 to 0xFFFFFF80139DFF16
+Lilu      mach: @ (DBG) found symbol _PE_initialize_console at 0xffffff80102d8a80 (non-aslr 0xffffff80102d8a80), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF80102D8A80 to 0xFFFFFF8013A85E60 diff 0x00000000037AD3DB argument 37AD3DB
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A80536 to 0xFFFFFF80102D8A86 diff 0xFFFFFFFFFC85854B argument FC85854B
+Lilu   patcher: @ (DBG) wrapped _PE_initialize_console
+Lilu       api: @ (DBG) got load request from WhateverGreen (170)
+WhateverGreen      init: @ (DBG) WhateverGreen bootstrap DBG-170-2025-07-07
+WhateverGreen       weg: @ (DBG) agdpmod using config pikera
+WhateverGreen       rad: @ (DBG) not enabling CAIL_DisableDrmdmaPowerGating
+WhateverGreen       rad: @ (DBG) not enabling CAIL_DisableGfxCGPowerGating
+WhateverGreen       rad: @ (DBG) not enabling CAIL_DisableUVDPowerGating
+WhateverGreen       rad: @ (DBG) not enabling CAIL_DisableVCEPowerGating
+WhateverGreen       rad: @ (DBG) not enabling CAIL_DisableDynamicGfxMGPowerGating
+WhateverGreen       rad: @ (DBG) not enabling CAIL_DisableGmcPowerGating
+WhateverGreen       rad: @ (DBG) not enabling CAIL_DisableAcpPowerGating
+WhateverGreen       rad: @ (DBG) not enabling CAIL_DisableSAMUPowerGating
+Lilu       api: @ (DBG) got load request from AppleALC (197)
+Lilu    config: @ (DBG) PE_initialize_console 7
+Lilu       api: @ (DBG) got load request from VirtualSMC (137)
+Lilu     nvram: @ failed to get IODeviceTree:/options
+Lilu       efi: @ (DBG) successful efi64 call GetVariable with response 800000000000000E
+VirtualSMC     efend: @ authenticated restart support is unavailable (800000000000000E, 8)
+Lilu     nvram: @ failed to get IODeviceTree:/options
+Lilu       efi: @ (DBG) successful efi64 call GetVariable with response 00000000
+Lilu       efi: @ (DBG) successful efi64 call GetVariable with response 00000000
+Lilu       rtc: @ (DBG) successful rtc read client obtain
+Lilu       rtc: @ rtc read failure 1 bytes from 180 E00002C2
+VirtualSMC     efend: @ no extra rtc memory is present for key erase
+Lilu    config: @ (DBG) PE_initialize_console 8
+Lilu    config: @ (DBG) PE_initialize_console 6
+Lilu    config: @ (DBG) PE_initialize_console 6 performing init
+Lilu       dev: @ (DBG) creating device info
+Lilu       dev: @ (DBG) found root device chosen
+Lilu       dev: @ (DBG) found root device efi
+Lilu       dev: @ (DBG) found root device cpus
+Lilu       dev: @ (DBG) found root device memory
+Lilu       dev: @ (DBG) found root device rom
+Lilu       dev: @ (DBG) found root device PCI0
+Lilu       dev: @ (DBG) found PCI root PCI0
+Lilu       dev: @ (DBG) pci bridge PCI0 is configured 0
+Lilu     iokit: @ (DBG) getOSData vendor-id was not found
+Lilu     iokit: @ (DBG) getOSData class-code was not found
+Lilu       dev: @ (DBG) found pci device GRFX 0x0 0x0
+Lilu     iokit: @ (DBG) getOSData vendor-id was not found
+Lilu     iokit: @ (DBG) getOSData class-code was not found
+Lilu       dev: @ (DBG) found pci device PCI1 0x0 0x0
+Lilu     iokit: @ (DBG) getOSData vendor-id was not found
+Lilu     iokit: @ (DBG) getOSData class-code was not found
+Lilu       dev: @ (DBG) found pci device PCI5 0x0 0x0
+Lilu     iokit: @ (DBG) getOSData vendor-id was not found
+Lilu     iokit: @ (DBG) getOSData class-code was not found
+Lilu       dev: @ (DBG) found pci device PCI6 0x0 0x0
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has 60000 value
+Lilu       dev: @ (DBG) found pci device pci8086,2e10 0x8086 0x60000
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has 60400 value
+Lilu       dev: @ (DBG) found pci device PEG0 0x8086 0x60400
+Lilu       dev: @ (DBG) found pci bridge PEG0
+Lilu       dev: @ (DBG) pci bridge PEG0 is configured 0
+Lilu       dev: @ (DBG) found GFX0 on pci bridge
+Lilu     iokit: @ (DBG) getOSData vendor-id has 1002 value
+Lilu     iokit: @ (DBG) getOSData class-code has 30000 value
+Lilu     iokit: @ (DBG) getOSData device-id has 6987 value
+Lilu       dev: @ (DBG) found GFX0 device GFX0 at PEG0 by 1002
+Lilu       dev: @ (DBG) found HDAU on pci bridge
+Lilu     iokit: @ (DBG) getOSData vendor-id has 1002 value
+Lilu     iokit: @ (DBG) getOSData class-code has 40300 value
+Lilu       dev: @ (DBG) found audio device HDAU at PEG0 by 1002
+Lilu       dev: @ (DBG) marking audio device as HDAU at HDAU
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has 78000 value
+Lilu       dev: @ (DBG) found pci device pci8086,2e14 0x8086 0x78000
+Lilu       dev: @ (DBG) found IMEI device candidate pci8086,2e14
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has 10185 value
+Lilu       dev: @ (DBG) found pci device pci8086,2e16 0x8086 0x10185
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has 70002 value
+Lilu       dev: @ (DBG) found pci device pci8086,2e17 0x8086 0x70002
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has C0300 value
+Lilu       dev: @ (DBG) found pci device USB3 0x8086 0xc0300
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has C0300 value
+Lilu       dev: @ (DBG) found pci device USB4 0x8086 0xc0300
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has C0300 value
+Lilu       dev: @ (DBG) found pci device USB5 0x8086 0xc0300
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has C0320 value
+Lilu       dev: @ (DBG) found pci device pci8086,3a6c 0x8086 0xc0320
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has 40300 value
+Lilu       dev: @ (DBG) found pci device HDEF 0x8086 0x40300
+Lilu       dev: @ (DBG) found HDEF device HDEF
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has 60400 value
+Lilu       dev: @ (DBG) found pci device PCI2 0x8086 0x60400
+Lilu       dev: @ (DBG) found pci bridge PCI2
+Lilu       dev: @ (DBG) pci bridge PCI2 is configured 0
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has 60400 value
+Lilu       dev: @ (DBG) found pci device PCI3 0x8086 0x60400
+Lilu       dev: @ (DBG) found pci bridge PCI3
+Lilu       dev: @ (DBG) pci bridge PCI3 is configured 0
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has C0300 value
+Lilu       dev: @ (DBG) found pci device USB0 0x8086 0xc0300
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has C0300 value
+Lilu       dev: @ (DBG) found pci device USB1 0x8086 0xc0300
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has C0300 value
+Lilu       dev: @ (DBG) found pci device USB2 0x8086 0xc0300
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has C0320 value
+Lilu       dev: @ (DBG) found pci device pci8086,3a6a 0x8086 0xc0320
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has 60401 value
+Lilu       dev: @ (DBG) found pci device PCI4 0x8086 0x60401
+Lilu       dev: @ (DBG) found pci bridge PCI4
+Lilu       dev: @ (DBG) pci bridge PCI4 is configured 0
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has 60100 value
+Lilu       dev: @ (DBG) found pci device ISA 0x8086 0x60100
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has 10400 value
+Lilu       dev: @ (DBG) found pci device SATA 0x8086 0x10400
+Lilu     iokit: @ (DBG) getOSData vendor-id has 8086 value
+Lilu     iokit: @ (DBG) getOSData class-code has C0500 value
+Lilu       dev: @ (DBG) found pci device SBUS 0x8086 0xc0500
+Lilu       dev: @ (DBG) found root device LNKA
+Lilu       dev: @ (DBG) found root device LNKB
+Lilu       dev: @ (DBG) found root device LNKC
+Lilu       dev: @ (DBG) found root device LNKD
+Lilu       dev: @ (DBG) found root device LNKE
+Lilu       dev: @ (DBG) found root device LNKF
+Lilu       dev: @ (DBG) found root device LNKG
+Lilu       dev: @ (DBG) found root device LNKH
+Lilu       dev: @ (DBG) found root device HPET
+Lilu       dev: @ (DBG) found root device AMW0
+Lilu       dev: @ (DBG) found root device PNLF
+Lilu     iokit: @ (DBG) getOSData apple-layout-id was not found
+Lilu       dev: @ (DBG) processing 1 external GPUs to disable - selective
+WhateverGreen       weg: @ (DBG) non-apple-fw proceeding with devprops 32772
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 0, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 1, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 2, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 3, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 4, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 5, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 6, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 7, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 8, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 9, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 10, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 11, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 12, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 13, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 14, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 15, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 16, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 17, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 18, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 19, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 20, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 21, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 22, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 23, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 24, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 25, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 26, polling
+Lilu       dev: @ (DBG) pci device GFX0 is not in service plane 27, polling
+Lilu       dev: @ (DBG) pci device GFX0 is in service plane 28
+Lilu       dev: @ (DBG) pci device GFX0 is in service plane 0
+Lilu     iokit: @ (DBG) read pci config discovered GFX0 space to be 0x00010000
+WhateverGreen     iokit: @ (DBG) getOSData device-id has 6987 value
+WhateverGreen       weg: @ (DBG) found AMD GPU with device-id 0x6987 actual 0x6987
+WhateverGreen       weg: @ (DBG) hooked configRead read methods!
+WhateverGreen       weg: @ (DBG) found existing built-in
+WhateverGreen     iokit: @ (DBG) getOSData applbkl was not found
+WhateverGreen       weg: @ (DBG) resulting applbkl value is 2
+Lilu     iokit: @ (DBG) compatible property starts with pci1028,420 and is 41 bytes
+Lilu     iokit: @ (DBG) fixing compatible to have IMEI
+Lilu      mach: @ (DBG) found symbol __ZN15IORegistryEntry11setPropertyEPKcPvj at 0xffffff801020a090 (non-aslr 0xffffff801020a090), type f, sect 1, desc 0
+Lilu      mach: @ (DBG) found symbol __ZNK15IORegistryEntry11getPropertyEPKc at 0xffffff801020a2f0 (non-aslr 0xffffff801020a2f0), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF801020A090 to 0xFFFFFF8013B2CCB0 diff 0x0000000003922C1B argument 3922C1B
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A8054A to 0xFFFFFF801020A096 diff 0xFFFFFFFFFC789B47 argument FC789B47
+Lilu   patcher: @ (DBG) wrapped __ZN15IORegistryEntry11setPropertyEPKcPvj
+Lilu   patcher: @ (DBG) from 0xFFFFFF801020A2F0 to 0xFFFFFF8013B2CF00 diff 0x0000000003922C0B argument 3922C0B
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A8055E to 0xFFFFFF801020A2F6 diff 0xFFFFFFFFFC789D93 argument FC789D93
+Lilu   patcher: @ (DBG) wrapped __ZNK15IORegistryEntry11getPropertyEPKc
+WhateverGreen    unfair: @ (DBG) disabling unfair gva due to missing boot argument
+Lilu      mach: @ (DBG) found symbol _vinfo at 0xffffff8010935b50 (non-aslr 0xffffff8010935b50), type f, sect 10, desc 0
+WhateverGreen       weg: @ (DBG) vinfo 1: 1080:1920 32:7680:1
+WhateverGreen       weg: @ (DBG) vinfo 2:  67:240 7680:1:0
+Lilu      mach: @ (DBG) found symbol _kernel_trap at 0xffffff800fbcda30 (non-aslr 0xffffff800fbcda30), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF800FBCDA30 to 0xFFFFFF8013B072E0 diff 0x0000000003F398AB argument 3F398AB
+Lilu   patcher: @ (DBG) using slotted jumping via 0xFFFFFF800FA11398
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A80572 to 0xFFFFFF800FBCDA36 diff 0xFFFFFFFFFC14D4BF argument FC14D4BF
+Lilu   patcher: @ (DBG) wrapped _kernel_trap
+Lilu      mach: @ (DBG) MachInfo asKernel 0 object constructed
+Lilu   patcher: @ (DBG) loaded kinfo com.apple.iokit.IOGraphicsFamily at 1 index
+Lilu      mach: @ (DBG) found symbol _kmod at 0xffffff8010aac858 (non-aslr 0xffffff8010aac858), type f, sect 10, desc 0
+Lilu   patcher: @ (DBG) _kmod address 0xffffff8010aac858
+Lilu      mach: @ (DBG) found symbol __ZN6OSKext6unloadEv at 0xffffff80101a2080 (non-aslr 0xffffff80101a2080), type f, sect 1, desc 0
+Lilu      mach: @ (DBG) found symbol __ZN6OSKext23saveLoadedKextPanicListEv at 0xffffff80101ad500 (non-aslr 0xffffff80101ad500), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF80101A2080 to 0xFFFFFF8013A7CC30 diff 0x00000000038DABAB argument 38DABAB
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A80586 to 0xFFFFFF80101A2086 diff 0xFFFFFFFFFC721AFB argument FC721AFB
+Lilu   patcher: @ (DBG) wrapped __ZN6OSKext6unloadEv
+Lilu   patcher: @ (DBG) from 0xFFFFFF80101AD500 to 0xFFFFFF8013A7CCD0 diff 0x00000000038CF7CB argument 38CF7CB
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A80599 to 0xFFFFFF80101AD505 diff 0xFFFFFFFFFC72CF67 argument FC72CF67
+Lilu   patcher: @ (DBG) wrapped __ZN6OSKext23saveLoadedKextPanicListEv
+Lilu      mach: @ (DBG) MachInfo asKernel 0 object constructed
+Lilu   patcher: @ (DBG) loaded kinfo com.apple.driver.AppleGraphicsDevicePolicy at 2 index
+Lilu      mach: @ (DBG) MachInfo asKernel 0 object constructed
+Lilu   patcher: @ (DBG) loaded kinfo com.apple.kext.AMDSupport at 3 index
+Lilu      mach: @ (DBG) MachInfo asKernel 0 object constructed
+Lilu   patcher: @ (DBG) loaded kinfo com.apple.kext.AMD9500Controller at 4 index
+Lilu      mach: @ (DBG) MachInfo asKernel 0 object constructed
+Lilu   patcher: @ (DBG) loaded kinfo com.apple.kext.AMDRadeonX4000 at 5 index
+Lilu      mach: @ (DBG) MachInfo asKernel 0 object constructed
+Lilu   patcher: @ (DBG) loaded kinfo com.apple.driver.AppleHDA at 6 index
+Lilu      mach: @ (DBG) MachInfo asKernel 0 object constructed
+Lilu   patcher: @ (DBG) loaded kinfo com.apple.driver.AppleHDAController at 7 index
+Lilu      mach: @ (DBG) MachInfo asKernel 0 object constructed
+Lilu   patcher: @ (DBG) loaded kinfo com.apple.driver.AppleGFXHDA at 8 index
+Lilu      mach: @ (DBG) MachInfo asKernel 0 object constructed
+Lilu   patcher: @ (DBG) loaded kinfo com.apple.driver.AppleSMC at 9 index
+Lilu      user: @ disabling user patcher on request!
+Lilu   patcher: @ (DBG) processing already loaded kexts by iterating over all kmods
+Lilu   patcher: @ (DBG) caught the right kext com.apple.driver.AppleSMC at 0xFFFFFF8011270000, invoking handler
+Lilu      mach: @ (DBG) got nouveau mach-o for com.apple.driver.AppleSMC at 0xFFFFFF8011270000
+Lilu      mach: @ (DBG) com.apple.driver.AppleSMC has segment is __TEXT from 0xFFFFFF8011270000 to 0xFFFFFF8011289000
+Lilu      mach: @ (DBG) Potential slots: 0xFFFFFF8011270540 - 0xFFFFFF8011270D44 : 0xFFFFFF8011289000 - 0xFFFFFF8011289000
+Lilu      mach: @ (DBG) activating slots for com.apple.driver.AppleSMC in 0xFFFFFF8011270540 - 0xFFFFFF8011270D44
+Lilu      mach: @ (DBG) com.apple.driver.AppleSMC has segment is __DATA from 0xFFFFFF8011289000 to 0xFFFFFF801128C000
+Lilu      mach: @ (DBG) com.apple.driver.AppleSMC has segment is __DATA_CONST from 0xFFFFFF801128C000 to 0xFFFFFF801128D000
+Lilu      mach: @ (DBG) com.apple.driver.AppleSMC has segment is __LINKEDIT from 0xFFFFFF8013014000 to 0xFFFFFF80139DFF16
+Lilu      mach: @ (DBG) getRunningPosition 0xffffff8011270000 of memory 118784 size
+Lilu      mach: @ (DBG) found symbol __ZN8AppleSMC20callPlatformFunctionEPK8OSSymbolbPvS3_S3_S3_ at 0xffffff801127cefa (non-aslr 0xffffff801127cefa), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF801127CEFA to 0xFFFFFF8013B06B40 diff 0x0000000002889C41 argument 2889C41
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A805AD to 0xFFFFFF801127CF00 diff 0xFFFFFFFFFD7FC94E argument FD7FC94E
+Lilu   patcher: @ (DBG) wrapped __ZN8AppleSMC20callPlatformFunctionEPK8OSSymbolbPvS3_S3_S3_
+Lilu      mach: @ (DBG) found symbol __ZN8AppleSMC20smcStopWatchdogTimerEv at 0xffffff8011273bbc (non-aslr 0xffffff8011273bbc), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF8011273BBC to 0xFFFFFF8013B06BD0 diff 0x000000000289300F argument 289300F
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A805C0 to 0xFFFFFF8011273BC1 diff 0xFFFFFFFFFD7F35FC argument FD7F35FC
+Lilu   patcher: @ (DBG) wrapped __ZN8AppleSMC20smcStopWatchdogTimerEv
+VirtualSMC    kstore: @ key [REV ] not found for info
+VirtualSMC    kstore: @ key [MPRO] not found for info
+VirtualSMC    kstore: @ key [MPRD] not found for info
+VirtualSMC    kstore: @ key [LGPB] not found for info
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF8012C69000 and its name is com.apple.private.KextAudit (start func is 0xFFFFFF8012C69EA4)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF8012ABA000 and its name is com.apple.driver.usb.AppleUSBHostCompositeDevice (start func is 0xFFFFFF8012ABD869)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF8011435000 and its name is com.apple.driver.usb.networking (start func is 0xFFFFFF8011436DCE)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF80113DF000 and its name is com.apple.driver.usb.cdc (start func is 0xFFFFFF80113E0D8C)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF8011403000 and its name is com.apple.driver.usb.cdc.ecm (start func is 0xFFFFFF8011406C5C)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF8012C23000 and its name is com.apple.driver.usb.IOUSBHostHIDDevice (start func is 0xFFFFFF8012C2B7D4)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8B38000 and its name is com.apple.iokit.IOGraphicsFamily (start func is 0xFFFFFF7FA8B61ACF)
+Lilu   patcher: @ (DBG) caught the right kext com.apple.iokit.IOGraphicsFamily at 0xFFFFFF7FA8B38000, invoking handler
+Lilu      mach: @ (DBG) got nouveau mach-o for com.apple.iokit.IOGraphicsFamily at 0xFFFFFF7FA8B38000
+Lilu      mach: @ (DBG) com.apple.iokit.IOGraphicsFamily has segment is __TEXT from 0xFFFFFF7FA8B38000 to 0xFFFFFF7FA8B67000
+Lilu      mach: @ (DBG) Potential slots: 0xFFFFFF7FA8B385F0 - 0xFFFFFF7FA8B39080 : 0xFFFFFF7FA8B66FCA - 0xFFFFFF7FA8B67000
+Lilu      mach: @ (DBG) activating slots for com.apple.iokit.IOGraphicsFamily in 0xFFFFFF7FA8B385F0 - 0xFFFFFF7FA8B39080
+Lilu      mach: @ (DBG) com.apple.iokit.IOGraphicsFamily has segment is __DATA from 0xFFFFFF7FA8B67000 to 0xFFFFFF7FA8B78000
+Lilu      mach: @ (DBG) com.apple.iokit.IOGraphicsFamily has segment is __DATA_CONST from 0xFFFFFF7FA8B78000 to 0xFFFFFF7FA8B7A000
+Lilu      mach: @ (DBG) com.apple.iokit.IOGraphicsFamily has segment is __LINKEDIT from 0xFFFFFF7FA90C1000 to 0xFFFFFF7FA9A9FAE7
+Lilu      mach: @ (DBG) getRunningPosition 0xffffff7fa8b38000 of memory 270336 size
+Lilu      mach: @ (DBG) found symbol __ZL16gIOFBVerboseBoot at 0xffffff7fa8b77387 (non-aslr 0xffffff7fa8b77387), type e, sect b, desc 0
+Lilu      mach: @ (DBG) found symbol __ZN13IOFramebuffer6initFBEv at 0xffffff7fa8b54738 (non-aslr 0xffffff7fa8b54738), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF7FA8B54738 to 0xFFFFFF8013B40200 diff 0x000000006AFEBAC3 argument 6AFEBAC3
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A805D4 to 0xFFFFFF7FA8B5473E diff 0xFFFFFFFF950D4165 argument 950D4165
+Lilu   patcher: @ (DBG) wrapped __ZN13IOFramebuffer6initFBEv
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7328000 and its name is com.apple.AppleGraphicsDeviceControl (start func is 0xFFFFFF7FA732BCE0)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7024000 and its name is com.apple.kext.AMDSupport (start func is 0xFFFFFF7FA70D996A)
+Lilu   patcher: @ (DBG) caught the right kext com.apple.kext.AMDSupport at 0xFFFFFF7FA7024000, invoking handler
+Lilu      mach: @ (DBG) got nouveau mach-o for com.apple.kext.AMDSupport at 0xFFFFFF7FA7024000
+Lilu      mach: @ (DBG) com.apple.kext.AMDSupport has segment is __TEXT from 0xFFFFFF7FA7024000 to 0xFFFFFF7FA70EA000
+Lilu      mach: @ (DBG) Potential slots: 0xFFFFFF7FA70245A0 - 0xFFFFFF7FA70254E0 : 0xFFFFFF7FA70EA000 - 0xFFFFFF7FA70EA000
+Lilu      mach: @ (DBG) activating slots for com.apple.kext.AMDSupport in 0xFFFFFF7FA70245A0 - 0xFFFFFF7FA70254E0
+Lilu      mach: @ (DBG) com.apple.kext.AMDSupport has segment is __DATA from 0xFFFFFF7FA70EA000 to 0xFFFFFF7FA710F000
+Lilu      mach: @ (DBG) com.apple.kext.AMDSupport has segment is __DATA_CONST from 0xFFFFFF7FA710F000 to 0xFFFFFF7FA7111000
+Lilu      mach: @ (DBG) com.apple.kext.AMDSupport has segment is __LINKEDIT from 0xFFFFFF7FA90C1000 to 0xFFFFFF7FA9A9FAE7
+Lilu      mach: @ (DBG) getRunningPosition 0xffffff7fa7024000 of memory 970752 size
+Lilu      mach: @ (DBG) found symbol __ZN14AtiBiosParser116getConnectorInfoEP13ConnectorInfoRh at 0xffffff7fa70b92ac (non-aslr 0xffffff7fa70b92ac), type f, sect 1, desc 0
+Lilu      mach: @ (DBG) found symbol __ZN14AtiBiosParser216getConnectorInfoEP13ConnectorInfoRh at 0xffffff7fa70c4e60 (non-aslr 0xffffff7fa70c4e60), type f, sect 1, desc 0
+Lilu      mach: @ (DBG) found symbol __ZN14AtiBiosParser126translateAtomConnectorInfoERN30AtiObjectInfoTableInterface_V117AtomConnectorInfoER13ConnectorInfo at 0xffffff7fa70b93fe (non-aslr 0xffffff7fa70b93fe), type f, sect 1, desc 0
+Lilu      mach: @ (DBG) found symbol __ZN14AtiBiosParser226translateAtomConnectorInfoERN30AtiObjectInfoTableInterface_V217AtomConnectorInfoER13ConnectorInfo at 0xffffff7fa70c4fa6 (non-aslr 0xffffff7fa70c4fa6), type f, sect 1, desc 0
+Lilu      mach: @ (DBG) found symbol __ZN13ATIController5startEP9IOService at 0xffffff7fa7025f00 (non-aslr 0xffffff7fa7025f00), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF7FA70B92AC to 0xFFFFFF8013B2F1D0 diff 0x000000006CA75F1F argument 6CA75F1F
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A805E8 to 0xFFFFFF7FA70B92B2 diff 0xFFFFFFFF93638CC5 argument 93638CC5
+Lilu   patcher: @ (DBG) wrapped __ZN14AtiBiosParser116getConnectorInfoEP13ConnectorInfoRh
+Lilu   patcher: @ (DBG) from 0xFFFFFF7FA70C4E60 to 0xFFFFFF8013B2F380 diff 0x000000006CA6A51B argument 6CA6A51B
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A805FC to 0xFFFFFF7FA70C4E66 diff 0xFFFFFFFF93644865 argument 93644865
+Lilu   patcher: @ (DBG) wrapped __ZN14AtiBiosParser216getConnectorInfoEP13ConnectorInfoRh
+Lilu   patcher: @ (DBG) from 0xFFFFFF7FA70B93FE to 0xFFFFFF8013B2F4B0 diff 0x000000006CA760AD argument 6CA760AD
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A80610 to 0xFFFFFF7FA70B9404 diff 0xFFFFFFFF93638DEF argument 93638DEF
+Lilu   patcher: @ (DBG) wrapped __ZN14AtiBiosParser126translateAtomConnectorInfoERN30AtiObjectInfoTableInterface_V117AtomConnectorInfoER13ConnectorInfo
+Lilu   patcher: @ (DBG) from 0xFFFFFF7FA70C4FA6 to 0xFFFFFF8013B2F790 diff 0x000000006CA6A7E5 argument 6CA6A7E5
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A80624 to 0xFFFFFF7FA70C4FAC diff 0xFFFFFFFF93644983 argument 93644983
+Lilu   patcher: @ (DBG) wrapped __ZN14AtiBiosParser226translateAtomConnectorInfoERN30AtiObjectInfoTableInterface_V217AtomConnectorInfoER13ConnectorInfo
+Lilu   patcher: @ (DBG) from 0xFFFFFF7FA7025F00 to 0xFFFFFF8013B2F970 diff 0x000000006CB09A6B argument 6CB09A6B
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A8063D to 0xFFFFFF7FA7025F0B diff 0xFFFFFFFF935A58C9 argument 935A58C9
+Lilu   patcher: @ (DBG) wrapped __ZN13ATIController5startEP9IOService
+Lilu      mach: @ (DBG) found symbol __ZN13ATIController8TestVRAME13PCI_REG_INDEXb at 0xffffff7fa702c120 (non-aslr 0xffffff7fa702c120), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF7FA702C120 to 0xFFFFFF8013B2E7D0 diff 0x000000006CB026AB argument 6CB026AB
+Lilu   patcher: @ (DBG) routed __ZN13ATIController8TestVRAME13PCI_REG_INDEXb
+Lilu      mach: @ (DBG) found symbol __ZN16AtiDeviceControl16notifyLinkChangeE31kAGDCRegisterLinkControlEvent_tmj at 0xffffff7fa70a54b0 (non-aslr 0xffffff7fa70a54b0), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF7FA70A54B0 to 0xFFFFFF8013B2E830 diff 0x000000006CA8937B argument 6CA8937B
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A80653 to 0xFFFFFF7FA70A54B8 diff 0xFFFFFFFF93624E60 argument 93624E60
+Lilu   patcher: @ (DBG) wrapped __ZN16AtiDeviceControl16notifyLinkChangeE31kAGDCRegisterLinkControlEvent_tmj
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7F9077F000 and its name is com.apple.kext.AMD9500Controller (start func is 0xFFFFFF7F907DC955)
+Lilu   patcher: @ (DBG) caught the right kext com.apple.kext.AMD9500Controller at 0xFFFFFF7F9077F000, invoking handler
+Lilu      mach: @ (DBG) got nouveau mach-o for com.apple.kext.AMD9500Controller at 0xFFFFFF7F9077F000
+Lilu      mach: @ (DBG) com.apple.kext.AMD9500Controller has segment is __TEXT from 0xFFFFFF7F9077F000 to 0xFFFFFF7F907E4000
+Lilu      mach: @ (DBG) Potential slots: 0xFFFFFF7F9077F5A0 - 0xFFFFFF7F9077FAE0 : 0xFFFFFF7F907E4000 - 0xFFFFFF7F907E4000
+Lilu      mach: @ (DBG) activating slots for com.apple.kext.AMD9500Controller in 0xFFFFFF7F9077F5A0 - 0xFFFFFF7F9077FAE0
+Lilu      mach: @ (DBG) com.apple.kext.AMD9500Controller has segment is __DATA from 0xFFFFFF7F907E4000 to 0xFFFFFF7F907F9000
+Lilu      mach: @ (DBG) com.apple.kext.AMD9500Controller has segment is __DATA_CONST from 0xFFFFFF7F907F9000 to 0xFFFFFF7F907FB000
+Lilu      mach: @ (DBG) com.apple.kext.AMD9500Controller has segment is __LINKEDIT from 0xFFFFFF7FA90C1000 to 0xFFFFFF7FA9A9FAE7
+Lilu      mach: @ (DBG) getRunningPosition 0xffffff7f9077f000 of memory 507904 size
+Lilu      mach: @ (DBG) found symbol __ZN17AMD9500Controller23findProjectByPartNumberEP20ControllerProperties at 0xffffff7f9078e8d0 (non-aslr 0xffffff7f9078e8d0), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF7F9078E8D0 to 0xFFFFFF8013B2E990 diff 0x00000000833A00BB argument 833A00BB
+Lilu   patcher: @ (DBG) will use absolute jumping to 0xFFFFFF8013B2E990
+Lilu   patcher: @ (DBG) routed __ZN17AMD9500Controller23findProjectByPartNumberEP20ControllerProperties
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8B81000 and its name is com.apple.iokit.IONDRVSupport (start func is 0xFFFFFF7FA8B896FC)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8B8D000 and its name is com.apple.driver.IOPlatformPluginFamily (start func is 0xFFFFFF7FA8B907E4)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8BAA000 and its name is com.apple.driver.IOPlatformPluginLegacy (start func is 0xFFFFFF7FA8BB2375)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8B94000 and its name is com.apple.driver.ACPI_SMC_PlatformPlugin (start func is 0xFFFFFF7FA8BA0590)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8BBA000 and its name is com.apple.driver.X86PlatformPlugin (start func is 0xFFFFFF7FA8BC6A68)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF8012702000 and its name is com.apple.iokit.IOSMBusFamily (start func is 0xFFFFFF8012702EF3)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA877B000 and its name is com.apple.driver.AppleSMBusController (start func is 0xFFFFFF7FA87806F4)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8725000 and its name is com.apple.driver.AppleMCCSControl (start func is 0xFFFFFF7FA872F5BE)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA713B000 and its name is com.apple.driver.AppleBacklightExpert (start func is 0xFFFFFF7FA713CE02)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7135000 and its name is com.apple.driver.AppleBacklight (start func is 0xFFFFFF7FA7137D05)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7313000 and its name is com.apple.driver.AGDCBacklightControl (start func is 0xFFFFFF7FA7315BA4)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF8012705000 and its name is com.apple.iokit.IOSerialFamily (start func is 0xFFFFFF801270BB89)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7111000 and its name is com.apple.driver.Apple16X50Serial (start func is 0xFFFFFF7FA7117BA2)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8CAE000 and its name is com.apple.driver.driverkit.serial (start func is 0xFFFFFF7FA8CB4AA6)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA83B2000 and its name is com.apple.driver.AppleIntelMCEReporter (start func is 0xFFFFFF7FA83B27DC)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA711C000 and its name is com.apple.driver.Apple16X50ACPI (start func is 0xFFFFFF7FA711CE12)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7133000 and its name is com.apple.driver.AppleAudioClockLibs (start func is 0xFFFFFF7FA7133C49)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8FE8000 and its name is com.apple.vecLib.kext (start func is 0xFFFFFF7FA90A5610)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8A25000 and its name is com.apple.iokit.IOAudioFamily (start func is 0xFFFFFF7FA8A3CA5A)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA881C000 and its name is com.apple.driver.AppleUSBAudio (start func is 0xFFFFFF7FA886B0D4)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8CF2000 and its name is com.apple.UVCService (start func is 0xFFFFFF7FA8CF2E76)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7588000 and its name is com.apple.iokit.IOHDAFamily (start func is 0xFFFFFF7FA758BABE)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7462000 and its name is com.apple.driver.AppleHDAController (start func is 0xFFFFFF7FA74732B0)
+Lilu   patcher: @ (DBG) caught the right kext com.apple.driver.AppleHDAController at 0xFFFFFF7FA7462000, invoking handler
+Lilu      mach: @ (DBG) got nouveau mach-o for com.apple.driver.AppleHDAController at 0xFFFFFF7FA7462000
+Lilu      mach: @ (DBG) com.apple.driver.AppleHDAController has segment is __TEXT from 0xFFFFFF7FA7462000 to 0xFFFFFF7FA7475000
+Lilu      mach: @ (DBG) Potential slots: 0xFFFFFF7FA74625A0 - 0xFFFFFF7FA7462630 : 0xFFFFFF7FA7474FF4 - 0xFFFFFF7FA7475000
+Lilu      mach: @ (DBG) activating slots for com.apple.driver.AppleHDAController in 0xFFFFFF7FA74625A0 - 0xFFFFFF7FA7462630
+Lilu      mach: @ (DBG) com.apple.driver.AppleHDAController has segment is __DATA from 0xFFFFFF7FA7475000 to 0xFFFFFF7FA7478000
+Lilu      mach: @ (DBG) com.apple.driver.AppleHDAController has segment is __DATA_CONST from 0xFFFFFF7FA7478000 to 0xFFFFFF7FA7479000
+Lilu      mach: @ (DBG) com.apple.driver.AppleHDAController has segment is __LINKEDIT from 0xFFFFFF7FA90C1000 to 0xFFFFFF7FA9A9FAE7
+Lilu      mach: @ (DBG) getRunningPosition 0xffffff7fa7462000 of memory 94208 size
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7237000 and its name is com.apple.driver.AppleFIVRDriver (start func is 0xFFFFFF7FA7238E1A)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7297000 and its name is com.apple.driver.AppleGFXHDA (start func is 0xFFFFFF7FA72F0A09)
+Lilu   patcher: @ (DBG) caught the right kext com.apple.driver.AppleGFXHDA at 0xFFFFFF7FA7297000, invoking handler
+Lilu      mach: @ (DBG) got nouveau mach-o for com.apple.driver.AppleGFXHDA at 0xFFFFFF7FA7297000
+Lilu      mach: @ (DBG) com.apple.driver.AppleGFXHDA has segment is __TEXT from 0xFFFFFF7FA7297000 to 0xFFFFFF7FA72F6000
+Lilu      mach: @ (DBG) Potential slots: 0xFFFFFF7FA7297640 - 0xFFFFFF7FA72978C0 : 0xFFFFFF7FA72F6000 - 0xFFFFFF7FA72F6000
+Lilu      mach: @ (DBG) activating slots for com.apple.driver.AppleGFXHDA in 0xFFFFFF7FA7297640 - 0xFFFFFF7FA72978C0
+Lilu      mach: @ (DBG) com.apple.driver.AppleGFXHDA has segment is __DATA from 0xFFFFFF7FA72F6000 to 0xFFFFFF7FA730E000
+Lilu      mach: @ (DBG) com.apple.driver.AppleGFXHDA has segment is __DATA_CONST from 0xFFFFFF7FA730E000 to 0xFFFFFF7FA7310000
+Lilu      mach: @ (DBG) com.apple.driver.AppleGFXHDA has segment is __LINKEDIT from 0xFFFFFF7FA90C1000 to 0xFFFFFF7FA9A9FAE7
+Lilu      mach: @ (DBG) getRunningPosition 0xffffff7fa7297000 of memory 495616 size
+Lilu      mach: @ (DBG) found symbol __ZN21AppleGFXHDAController5probeEP9IOServicePi at 0xffffff7fa72995ee (non-aslr 0xffffff7fa72995ee), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF7FA72995EE to 0xFFFFFF8013BD6E30 diff 0x000000006C93D83D argument 6C93D83D
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A80667 to 0xFFFFFF7FA72995F4 diff 0xFFFFFFFF93818F88 argument 93818F88
+Lilu   patcher: @ (DBG) wrapped __ZN21AppleGFXHDAController5probeEP9IOServicePi
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA888C000 and its name is com.apple.driver.usb.serial (start func is 0xFFFFFF7FA8890BBA)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8816000 and its name is com.apple.driver.usb.cdc.acm (start func is 0xFFFFFF7FA8818D02)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF8012630000 and its name is com.apple.driver.mDNSOffloadUserClient (start func is 0xFFFFFF8012634223)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF8012717000 and its name is com.apple.iokit.IOSkywalkFamily (start func is 0xFFFFFF801275FA50)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8787000 and its name is com.apple.driver.AppleSMBusPCI (start func is 0xFFFFFF7FA8787DF4)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8721000 and its name is com.apple.driver.AppleLPC (start func is 0xFFFFFF7FA8722B98)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF8012778000 and its name is com.apple.iokit.IOSlowAdaptiveClockingFamily (start func is 0xFFFFFF8012779EF0)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA871E000 and its name is com.apple.driver.AppleIntelSlowAdaptiveClocking (start func is 0xFFFFFF7FA871EEC4)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA731D000 and its name is com.apple.AppleGPUWrangler (start func is 0xFFFFFF7FA732398C)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA71FA000 and its name is com.apple.driver.AppleDiskImages2 (start func is 0xFFFFFF7FA7204188)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7591000 and its name is com.apple.driver.AppleHV (start func is 0xFFFFFF7FA75A35AC)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA75A9000 and its name is com.apple.driver.AppleIPAppender (start func is 0xFFFFFF7FA75AC9CB)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA88C8000 and its name is com.apple.iokit.BroadcomBluetooth20703USBTransport (start func is 0xFFFFFF7FA88C8B4E)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA88CB000 and its name is com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport (start func is 0xFFFFFF7FA88CBAC8)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA88CE000 and its name is com.apple.iokit.CSRBluetoothHostControllerUSBTransport (start func is 0xFFFFFF7FA88CEB12)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8A4D000 and its name is com.apple.driver.IOBluetoothHostControllerPCIeTransport (start func is 0xFFFFFF7FA8A4DB12)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8A50000 and its name is com.apple.iokit.IOBluetoothHostControllerTransport (start func is 0xFFFFFF7FA8A50B4E)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8A53000 and its name is com.apple.iokit.IOBluetoothHostControllerUARTTransport (start func is 0xFFFFFF7FA8A53B12)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8A56000 and its name is com.apple.iokit.IOBluetoothHostControllerUSBTransport (start func is 0xFFFFFF7FA8A56B22)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8A59000 and its name is com.apple.iokit.IOBluetoothPacketLogger (start func is 0xFFFFFF7FA8A59BF4)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8A5C000 and its name is com.apple.iokit.IOBluetoothSerialManager (start func is 0xFFFFFF7FA8A5CBE4)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8C85000 and its name is com.apple.driver.usb.AppleUSBUserHCI (start func is 0xFFFFFF7FA8C9B123)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8CA6000 and its name is com.apple.iokit.IOUserEthernet (start func is 0xFFFFFF7FA8CA9AD6)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8F14000 and its name is com.apple.driver.pmtelemetry (start func is 0xFFFFFF7FA8F1AC44)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7319000 and its name is com.apple.AGDCPluginDisplayMetrics (start func is 0xFFFFFF7FA731AF10)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7310000 and its name is com.apple.driver.AppleGraphicsControl (start func is 0xFFFFFF7FA7310F8A)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA7331000 and its name is com.apple.driver.AppleGraphicsDevicePolicy (start func is 0xFFFFFF7FA733A920)
+Lilu   patcher: @ (DBG) caught the right kext com.apple.driver.AppleGraphicsDevicePolicy at 0xFFFFFF7FA7331000, invoking handler
+Lilu      mach: @ (DBG) got nouveau mach-o for com.apple.driver.AppleGraphicsDevicePolicy at 0xFFFFFF7FA7331000
+Lilu      mach: @ (DBG) com.apple.driver.AppleGraphicsDevicePolicy has segment is __TEXT from 0xFFFFFF7FA7331000 to 0xFFFFFF7FA733B000
+Lilu      mach: @ (DBG) Potential slots: 0xFFFFFF7FA7331550 - 0xFFFFFF7FA7332468 : 0xFFFFFF7FA733AFF9 - 0xFFFFFF7FA733B000
+Lilu      mach: @ (DBG) activating slots for com.apple.driver.AppleGraphicsDevicePolicy in 0xFFFFFF7FA7331550 - 0xFFFFFF7FA7332468
+Lilu      mach: @ (DBG) com.apple.driver.AppleGraphicsDevicePolicy has segment is __DATA from 0xFFFFFF7FA733B000 to 0xFFFFFF7FA7346000
+Lilu      mach: @ (DBG) com.apple.driver.AppleGraphicsDevicePolicy has segment is __DATA_CONST from 0xFFFFFF7FA7346000 to 0xFFFFFF7FA7347000
+Lilu      mach: @ (DBG) com.apple.driver.AppleGraphicsDevicePolicy has segment is __LINKEDIT from 0xFFFFFF7FA90C1000 to 0xFFFFFF7FA9A9FAE7
+Lilu      mach: @ (DBG) getRunningPosition 0xffffff7fa7331000 of memory 90112 size
+Lilu      mach: @ (DBG) getRunningPosition 0xffffff7fa7331000 of memory 90112 size
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7F90825000 and its name is com.apple.kext.AMDRadeonServiceManager (start func is 0xFFFFFF7F90827BCE)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7F90CD5000 and its name is com.apple.kext.AMDRadeonX4000HWServices (start func is 0xFFFFFF7F90CD8A92)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA899F000 and its name is com.apple.iokit.IOAcceleratorFamily2 (start func is 0xFFFFFF7FA89F7DAC)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7F9082B000 and its name is com.apple.kext.AMDRadeonX4000 (start func is 0xFFFFFF7F908E0BA6)
+Lilu   patcher: @ (DBG) caught the right kext com.apple.kext.AMDRadeonX4000 at 0xFFFFFF7F9082B000, invoking handler
+Lilu      mach: @ (DBG) got nouveau mach-o for com.apple.kext.AMDRadeonX4000 at 0xFFFFFF7F9082B000
+Lilu      mach: @ (DBG) com.apple.kext.AMDRadeonX4000 has segment is __TEXT from 0xFFFFFF7F9082B000 to 0xFFFFFF7F90C7E000
+Lilu      mach: @ (DBG) Potential slots: 0xFFFFFF7F9082B640 - 0xFFFFFF7F9082C180 : 0xFFFFFF7F90C7E000 - 0xFFFFFF7F90C7E000
+Lilu      mach: @ (DBG) activating slots for com.apple.kext.AMDRadeonX4000 in 0xFFFFFF7F9082B640 - 0xFFFFFF7F9082C180
+Lilu      mach: @ (DBG) com.apple.kext.AMDRadeonX4000 has segment is __DATA from 0xFFFFFF7F90C7E000 to 0xFFFFFF7F90CD1000
+Lilu      mach: @ (DBG) com.apple.kext.AMDRadeonX4000 has segment is __DATA_CONST from 0xFFFFFF7F90CD1000 to 0xFFFFFF7F90CD5000
+Lilu      mach: @ (DBG) com.apple.kext.AMDRadeonX4000 has segment is __LINKEDIT from 0xFFFFFF7FA90C1000 to 0xFFFFFF7FA9A9FAE7
+Lilu      mach: @ (DBG) getRunningPosition 0xffffff7f9082b000 of memory 4890624 size
+Lilu      mach: @ (DBG) found symbol __ZN37AMDRadeonX4000_AMDGraphicsAccelerator19populateAccelConfigEP13IOAccelConfig at 0xffffff7f9082ddce (non-aslr 0xffffff7f9082ddce), type f, sect 1, desc 0
+Lilu   patcher: @ (DBG) from 0xFFFFFF7F9082DDCE to 0xFFFFFF8013B4D980 diff 0x000000008331FBAD argument 8331FBAD
+Lilu   patcher: @ (DBG) will use absolute jumping to 0xFFFFFF8013B4D980
+Lilu   patcher: @ (DBG) using slotted jumping via 0xFFFFFF7F9082B640
+Lilu   patcher: @ (DBG) from 0xFFFFFF8013A8067B to 0xFFFFFF7F9082DDD4 diff 0xFFFFFFFF7CDAD754 argument 7CDAD754
+Lilu   patcher: @ (DBG) will use absolute jumping to 0xFFFFFF7F9082DDD4
+Lilu   patcher: @ (DBG) wrapped __ZN37AMDRadeonX4000_AMDGraphicsAccelerator19populateAccelConfigEP13IOAccelConfig
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7F90CE0000 and its name is com.apple.kext.AMDRadeonX4000HWLibs (start func is 0xFFFFFF7F90F032F5)
+WhateverGreen       rad: @ (DBG) starting controller 0xFFFFFF9B6C2A8540
+WhateverGreen       rad: @ (DBG) GetProperty discovered property merge request for aty_properties
+WhateverGreen       rad: @ (DBG) GetProperty discovered property merge request for aty_config
+WhateverGreen       con: @ (DBG) 0 is type 00000400 (DP  ) flags 00000304 feat 0100 pri 0000 txmit 11 enc 02 hotplug 05 sense 01
+WhateverGreen       rad: @ (DBG) translateAtomConnectorInfoV1 got sense id 01
+WhateverGreen       rad: @ (DBG) translateAtomConnectorInfoV1 checking 2120 object id
+WhateverGreen       rad: @ (DBG) autocorrectConnector use -raddvi to enable dvi autocorrection
+WhateverGreen       con: @ (DBG) 0 is type 00000400 (DP  ) flags 00000304 feat 0100 pri 0000 txmit 21 enc 03 hotplug 04 sense 02
+WhateverGreen       rad: @ (DBG) translateAtomConnectorInfoV1 got sense id 02
+WhateverGreen       rad: @ (DBG) translateAtomConnectorInfoV1 checking 2220 object id
+WhateverGreen       rad: @ (DBG) autocorrectConnector use -raddvi to enable dvi autocorrection
+WhateverGreen       con: @ (DBG) 0 is type 00000400 (DP  ) flags 00000304 feat 0100 pri 0000 txmit 10 enc 00 hotplug 03 sense 03
+WhateverGreen       rad: @ (DBG) translateAtomConnectorInfoV1 got sense id 03
+WhateverGreen       rad: @ (DBG) translateAtomConnectorInfoV1 checking 211E object id
+WhateverGreen       rad: @ (DBG) autocorrectConnector use -raddvi to enable dvi autocorrection
+WhateverGreen     iokit: @ (DBG) getOSData connector-count has 3 value
+WhateverGreen       rad: @ (DBG) getConnectorsInfo got size override to 3
+WhateverGreen       rad: @ (DBG) getConnectorsInfo installed 3 connectors
+WhateverGreen       rad: @ (DBG) setting fb limit to 3
+WhateverGreen       rad: @ (DBG) getConnectorsInfo resulting 3 connectors follow
+WhateverGreen       con: @ (DBG) 0 is type 00000400 (DP  ) flags 00000304 feat 0100 pri 0001 txmit 10 enc 00 hotplug 03 sense 03
+WhateverGreen       con: @ (DBG) 1 is type 00000400 (DP  ) flags 00000304 feat 0100 pri 0000 txmit 11 enc 02 hotplug 05 sense 01
+WhateverGreen       con: @ (DBG) 2 is type 00000400 (DP  ) flags 00000304 feat 0100 pri 0000 txmit 21 enc 03 hotplug 04 sense 02
+WhateverGreen       rad: @ (DBG) SetProperty caught model 19 (AMD Radeon Polaris)
+WhateverGreen       rad: @ (DBG) SetProperty ignored setting model to AMD Radeon Polaris
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7F907FB000 and its name is com.apple.kext.AMDFramebuffer (start func is 0xFFFFFF7F9081D8E2)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8897000 and its name is com.apple.driver.AppleUpstreamUserClient (start func is 0xFFFFFF7FA8899E58)
+WhateverGreen       rad: @ (DBG) starting controller done 1 0xFFFFFF9B6C2A8540
+WhateverGreen       rad: @ (DBG) GetProperty discovered property merge request for cail_properties
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8FAC000 and its name is com.apple.kext.triggers (start func is 0xFFFFFF7FA8FAEB84)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8E78000 and its name is com.apple.filesystems.autofs (start func is 0xFFFFFF7FA8E7EE0D)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF8012619000 and its name is com.apple.iokit.IOEthernetAVBController (start func is 0xFFFFFF801261ACB0)
+Lilu    config: @ (DBG) PE_initialize_console 5
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8BF2000 and its name is com.apple.plugin.IOgPTPPlugin (start func is 0xFFFFFF7FA8C3A2AC)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA892C000 and its name is com.apple.iokit.IOAVBFamily (start func is 0xFFFFFF7FA8937DB6)
+Lilu    config: @ (DBG) PE_initialize_console 7
+Lilu    config: @ (DBG) PE_initialize_console 7
+Lilu    config: @ (DBG) PE_initialize_console 7
+WhateverGreen       weg: @ (DBG) fb info 1: 12288:1 0:0:32
+WhateverGreen       weg: @ (DBG) fb info 2: 3:8 --------RRRRRRRRGGGGGGGGBBBBBBBB 0:0:0
+WhateverGreen       weg: @ (DBG) this display has different mode
+WhateverGreen       weg: @ (DBG) fb info 1: 12288:1 0:0:32
+WhateverGreen       weg: @ (DBG) fb info 2: 3:8 --------RRRRRRRRGGGGGGGGBBBBBBBB 0:0:0
+WhateverGreen       weg: @ (DBG) this display has different mode
+WhateverGreen       weg: @ (DBG) fb info 1: 12288:1 0:0:32
+WhateverGreen       weg: @ (DBG) fb info 2: 3:8 --------RRRRRRRRGGGGGGGGBBBBBBBB 0:0:0
+WhateverGreen       weg: @ (DBG) this display has different mode
+Lilu    config: @ (DBG) PE_initialize_console 5
+Lilu    config: @ (DBG) PE_initialize_console 5
+VirtualSMC    kstore: @ key [F0Ac] not found for info
+VirtualSMC    kstore: @ key [MSAc] not found for info
+VirtualSMC    kstore: @ key [MSAf] not found for info
+VirtualSMC    kstore: @ key [MSAg] not found for info
+VirtualSMC    kstore: @ key [MSAi] not found for info
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+VirtualSMC    kstore: @ key [MSPA] not found for info
+VirtualSMC    kstore: @ key [MSGA] not found for info
+VirtualSMC    kstore: @ key [WIr0] not found for info
+VirtualSMC    kstore: @ key [WIw0] not found for info
+VirtualSMC    kstore: @ key [WIz0] not found for info
+VirtualSMC    kstore: @ key [SBFL] not found for info
+VirtualSMC    kstore: @ key [TA0V] not found for info
+VirtualSMC    kstore: @ key [TCXc] not found for info
+VirtualSMC    kstore: @ key [TG0F] not found for info
+VirtualSMC    kstore: @ key [TG1F] not found for info
+VirtualSMC    kstore: @ key [TH0a] not found for info
+VirtualSMC    kstore: @ key [TH0b] not found for info
+VirtualSMC    kstore: @ key [TH1a] not found for info
+VirtualSMC    kstore: @ key [TH1F] not found for info
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+VirtualSMC    kstore: @ key [TL1V] not found for info
+VirtualSMC    kstore: @ key [TM0V] not found for info
+VirtualSMC    kstore: @ key [TS0V] not found for info
+VirtualSMC    kstore: @ key [PfST] not found for info
+VirtualSMC    kstore: @ key [PfCP] not found for info
+VirtualSMC    kstore: @ key [PfCT] not found for info
+VirtualSMC    kstore: @ key [PfGT] not found for info
+VirtualSMC    kstore: @ key [PfM0] not found for info
+VirtualSMC    kstore: @ key [PfHT] not found for info
+VirtualSMC    kstore: @ key [MSXA] not found for info
+VirtualSMC    kstore: @ key [PCPG] not found for info
+VirtualSMC    kstore: @ key [TA0V] not found for info
+VirtualSMC    kstore: @ key [Ts1S] not found for info
+VirtualSMC    kstore: @ key [Ts0S] not found for info
+VirtualSMC    kstore: @ key [PCPC] not found for info
+VirtualSMC    kstore: @ key [PSTR] not found for info
+VirtualSMC    kstore: @ key [TC0P] not found for info
+VirtualSMC    kstore: @ key [Ts2S] not found for info
+VirtualSMC    kstore: @ key [TB1T] not found for info
+VirtualSMC    kstore: @ key [TB0T] not found for info
+VirtualSMC    kstore: @ key [TB2T] not found for info
+VirtualSMC    kstore: @ key [TM0P] not found for info
+VirtualSMC    kstore: @ key [PC0R] not found for info
+VirtualSMC    kstore: @ key [PCPT] not found for info
+VirtualSMC    kstore: @ key [PHDC] not found for info
+VirtualSMC    kstore: @ key [TC0F] not found for info
+VirtualSMC    kstore: @ key [FPDc] not found for info
+VirtualSMC    kstore: @ key [TCMc] not found for info
+VirtualSMC    kstore: @ key [Ts0S] not found for info
+VirtualSMC    kstore: @ key [TPMV] not found for info
+VirtualSMC    kstore: @ key [TH0A] not found for info
+VirtualSMC    kstore: @ key [TG0P] not found for info
+VirtualSMC    kstore: @ key [TM0S] not found for info
+VirtualSMC    kstore: @ key [TCXC] not found for info
+VirtualSMC    kstore: @ key [TH0J] not found for info
+VirtualSMC    kstore: @ key [TG0D] not found for info
+VirtualSMC    kstore: @ key [TA0V] not found for info
+VirtualSMC    kstore: @ key [TH0F] not found for info
+VirtualSMC    kstore: @ key [Ts0P] not found for info
+VirtualSMC    kstore: @ key [TG1F] not found for info
+VirtualSMC    kstore: @ key [TH0B] not found for info
+VirtualSMC    kstore: @ key [TH0x] not found for info
+VirtualSMC    kstore: @ key [F1Ac] not found for info
+VirtualSMC    kstore: @ key [TKBV] not found for info
+VirtualSMC    kstore: @ key [Ta0P] not found for info
+VirtualSMC    kstore: @ key [TM0P] not found for info
+VirtualSMC    kstore: @ key [Th2H] not found for info
+VirtualSMC    kstore: @ key [TB2T] not found for info
+VirtualSMC    kstore: @ key [F1Tg] not found for info
+VirtualSMC    kstore: @ key [TC0F] not found for info
+VirtualSMC    kstore: @ key [Ts1S] not found for info
+VirtualSMC    kstore: @ key [TH0C] not found for info
+VirtualSMC    kstore: @ key [TG0F] not found for info
+VirtualSMC    kstore: @ key [TBXT] not found for info
+VirtualSMC    kstore: @ key [Th0N] not found for info
+VirtualSMC    kstore: @ key [TG1D] not found for info
+VirtualSMC    kstore: @ key [F0Ac] not found for info
+VirtualSMC    kstore: @ key [TM0V] not found for info
+VirtualSMC    kstore: @ key [Th1H] not found for info
+VirtualSMC    kstore: @ key [TB1T] not found for info
+VirtualSMC    kstore: @ key [F0Tg] not found for info
+VirtualSMC    kstore: @ key [TC0P] not found for info
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+WhateverGreen       rad: @ (DBG) AGDCValidateDetailedTiming 0 -> 1 (2)
+Lilu   patcher: @ (DBG) invoked at kext loading
+Lilu   patcher: @ (DBG) newly loaded kext is 0xFFFFFF7FA8EB1000 and its name is com.apple.filesystems.msdosfs (start func is 0xFFFFFF7FA8EBDCF2)

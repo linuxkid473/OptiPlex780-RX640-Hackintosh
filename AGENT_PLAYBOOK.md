@@ -149,3 +149,28 @@ Reordered with the full-size DP first and priority 1 → see `acpi-src/SSDT-RX64
    script is [`scripts/make_injector.py`](scripts/make_injector.py) (run it on the target Mac).
 4. If your card's connector order differs, read `WhateverGreen con: ...` lines from the DEBUG Lilu log and rebuild
    `SSDT-RX640-CONNECTORS.dsl` with your monitor's port first.
+
+## 9. Booting without the USB (OpenDuet on the internal GPT disk)
+
+Script: [`scripts/install_internal.sh`](scripts/install_internal.sh) — run on the target with `sudo`, booted from the USB,
+after copying `extras/LegacyBoot/{boot0,boot1f32,bootX64}` to `/tmp`. It backs up sector 0 + the ESP, copies the USB's
+`EFI/` and `boot` to the internal FAT32 ESP, writes `boot1f32` to the ESP's PBR (keeping its BPB) and `boot0` into the
+MBR boot code only (`fdisk -uy -f boot0`, partition table untouched). Monterey needs *Remote Login → "Allow full disk
+access for remote users"* for this over SSH.
+
+**⚠️ Do NOT mark the GPT protective-MBR entry (type `0xEE`) active.** We did (`fdisk -e`, `f 1`, byte 446 = `0x80`) because
+some Dell BIOSes want an active partition. Result: the internal disk showed **`BOOT FAIL`**, and even booting from the
+USB, **OpenCore no longer listed the Monterey volume** — OpenDuet's EDK2-derived partition driver doesn't accept a
+protective MBR whose boot indicator isn't `0x00`, so it stops treating the disk as GPT and the APFS container
+disappears. The OptiPlex 780 BIOS boots the internal disk fine with the flag at `0x00`.
+
+Recovery (from the Monterey installer's Terminal, booted from the USB — no `od`/`xxd`/`python` there, `tr` works):
+```bash
+dd if=/dev/rdisk0 of=/tmp/s bs=512 count=1
+dd if=/tmp/s bs=1 skip=446 count=1 2>/dev/null | LC_ALL=C tr '\200\000' 'AZ'; echo   # A = 0x80 (bad), Z = 0x00
+printf '\000' | dd of=/tmp/s bs=1 seek=446 conv=notrunc
+diskutil unmountDisk force disk0            # otherwise: dd: /dev/rdisk0: Resource busy
+dd if=/tmp/s of=/dev/rdisk0 bs=512 count=1
+```
+Also: raw devices (`/dev/rdiskN`) only allow whole-sector I/O — `dd bs=1`/`bs=440` reads return nothing, so always read
+a full 512-byte sector into a file and inspect the file.

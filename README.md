@@ -61,7 +61,7 @@ WhateverGreen rad: getConnectorsInfo installed 3 connectors
 | [`extras/RX640Injector-Monterey-LE.kext`](extras/RX640Injector-Monterey-LE.kext) | **The key piece.** Install to `/Library/Extensions` (see step 6). Built from Monterey 12.6.7's own AMD personalities. |
 | [`acpi-src/`](acpi-src) | SSDT sources (`.dsl`) + compiled `.aml`: connector reorder, the various spoof attempts, decompiled patched Dell DSDT |
 | [`configs/`](configs) | Every `config.plist` variant tried during the journey (all SMBIOS-redacted) |
-| [`scripts/`](scripts) | `make_usb_monterey.sh` (builds the legacy-boot USB), `build_config_*.py` (generate each config from OpenCore's `Sample.plist`) |
+| [`scripts/`](scripts) | `make_usb_monterey.sh` (builds the legacy-boot USB), `install_internal.sh` (OpenDuet on the internal disk), `make_injector.py` (rebuild the injector for any macOS build), `build_config_*.py` (generate each config from OpenCore's `Sample.plist`) |
 | [`extras/`](extras) | OpenDuet `LegacyBoot` files, AAAMouSSE, ASPP-Override, AppleMCEReporterDisabler, the (failed) OpenCore-injected injector variant |
 | [`EFI-Mojave-stable-vesa/`](EFI-Mojave-stable-vesa) | Mojave EFI that boots reliably with **no** GPU acceleration (VESA 7 MB) — safe fallback |
 | [`EFI-original-2020-downloaded/`](EFI-original-2020-downloaded) | The ancient OC 0.6 EFI this project started from (for reference only; don't use) |
@@ -116,7 +116,7 @@ Full story, all failed experiments and exact log signatures: **[AGENT_PLAYBOOK.m
 - [x] Monterey 12.6.7, Metal acceleration, 1080p60 30-bit on DP
 - [x] Ethernet (IP via DHCP), audio kexts loaded, USB
 - [ ] Switch Lilu/WhateverGreen back to RELEASE and drop `-liludbgall liludump=90`
-- [ ] Install OpenDuet + OpenCore onto the internal disk (currently boots from the USB)
+- [x] OpenDuet + OpenCore on the internal disk — boots without the USB ([`scripts/install_internal.sh`](scripts/install_internal.sh); **never mark the protective MBR active**, see playbook §9)
 - [ ] Sleep/wake: the RX 640 did **not** survive S3 on Mojave (`ATIController failed to access PCI device`) — untested on Monterey
 - [ ] Mini-DP ports untested with the connector reorder
 

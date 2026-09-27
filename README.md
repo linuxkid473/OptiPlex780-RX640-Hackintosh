@@ -57,7 +57,8 @@ WhateverGreen rad: getConnectorsInfo installed 3 connectors
 
 | Path | What |
 |---|---|
-| [`EFI-USB-working/`](EFI-USB-working) | **The exact EFI (+ OpenDuet `boot` file) that is booting the working machine.** `config.plist` = real-ID Monterey config. SMBIOS redacted. |
+| [`EFI-internal-final/`](EFI-internal-final) | **⭐ The final EFI, copied off the machine's internal ESP.** Real ID + injector, connector reorder, `SSDT-RX640-CODEC` (hardware encode/decode), VoodooHDA audio, no `-v`. The `config.plist.before-*` files are the step-by-step backups. SMBIOS redacted. |
+| [`EFI-USB-working/`](EFI-USB-working) | The recovery USB's EFI (first working acceleration config: verbose boot, AppleALC, no codec spoof). SMBIOS redacted. |
 | [`extras/RX640Injector-Monterey-LE.kext`](extras/RX640Injector-Monterey-LE.kext) | **The key piece.** Install to `/Library/Extensions` (see step 6). Built from Monterey 12.6.7's own AMD personalities. |
 | [`acpi-src/`](acpi-src) | SSDT sources (`.dsl`) + compiled `.aml`: connector reorder, the various spoof attempts, decompiled patched Dell DSDT |
 | [`configs/`](configs) | Every `config.plist` variant tried during the journey (all SMBIOS-redacted) |
@@ -101,6 +102,17 @@ turned out **not** to be needed), and macOS installers.
    ```
    (`kmutil install --update-all` fails with *Read-only file system* on the sealed volume — use `kmutil load -p`.)
 
+## Final state (internal disk)
+
+| | |
+|---|---|
+| boot-args | `keepsyms=1 debug=0x100 agdpmod=pikera -radcodec -liludbgall liludump=90` |
+| GPU | real `0x6987` in PCI config space (CAIL OK, Metal), `device-id` **property** `0x67FF` + `no-gfx-spoof` + `-radcodec` → video engine sees a Baffin PID ([`SSDT-RX640-CODEC`](acpi-src/SSDT-RX640-CODEC.dsl)) |
+| Video | **HEVC hardware encode ✅, HEVC hardware decode ✅** (H.264 encode uses the same engine but was not measured) — 600-frame 1080p HEVC encode in 29 s (~21 fps, encoder ~0% CPU); HEVC playback smooth with the decoder at 1–3% CPU. Test: [`scripts/Test-RX640-Video.command`](scripts/Test-RX640-Video.command) |
+| Audio | VoodooHDA 2.9.2 in `/Library/Extensions` (approved in Security & Privacy); AppleALC + OC VoodooHDA entry disabled |
+| `/Library/Extensions` | `RX640Injector.kext` (codeless), `VoodooHDA.kext` |
+| SIP | `csr-active-config 0x203` |
+
 ## Why it works (the short explanation)
 
 | Approach | Chip init (`CAIL`) | Display | Why |
@@ -116,6 +128,9 @@ Full story, all failed experiments and exact log signatures: **[AGENT_PLAYBOOK.m
 - [x] Monterey 12.6.7, Metal acceleration, 1080p60 30-bit on DP
 - [x] Ethernet (IP via DHCP), USB
 - [x] Audio via **VoodooHDA in `/Library/Extensions`** (AppleALC didn't attach; see playbook §10)
+- [x] Hardware video: HEVC encode + HEVC decode via `-radcodec` + `no-gfx-spoof` (playbook §11)
+- [ ] H.264 hardware encode: expected to work (same VCE block) — not measured yet
+- [x] Normal (non-verbose) boot
 - [ ] Switch Lilu/WhateverGreen back to RELEASE and drop `-liludbgall liludump=90`
 - [x] OpenDuet + OpenCore on the internal disk — boots without the USB ([`scripts/install_internal.sh`](scripts/install_internal.sh); **never mark the protective MBR active**, see playbook §9)
 - [ ] Sleep/wake: the RX 640 did **not** survive S3 on Mojave (`ATIController failed to access PCI device`) — untested on Monterey

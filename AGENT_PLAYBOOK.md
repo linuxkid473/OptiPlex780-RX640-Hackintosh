@@ -193,3 +193,24 @@ a full 512-byte sector into a file and inspect the file.
   Sound preferences. Codeless kexts (like RX640Injector) don't need this approval; kexts with an executable do, even with
   `csr-active-config 0x203`.
 - Final internal-EFI boot-args: `keepsyms=1 debug=0x100 agdpmod=pikera -liludbgall liludump=90` (no `-v`, no `alcid`).
+
+## 11. Hardware video encode/decode (`-radcodec` without breaking CAIL)
+
+The video engine (`AMDRadeonX4000_AMDAccelVideoContext::getHWInfo`) doesn't know PID `0x6987`, so there's no
+VideoToolbox hardware encoder. The classic fix — spoof to `0x67FF` + `-radcodec` — breaks CAIL (§5a). What works:
+
+- Keep the **real ID in PCI config space**, but set only the **IORegistry `device-id` property** to `0x67FF` and add
+  WhateverGreen's **`no-gfx-spoof`** property (WhateverGreen then does *not* hook `configRead16/32`, so HWLibs/CAIL still
+  read `0x6987` and initialise the Polaris 23 correctly).
+- Add **`-radcodec`**: WhateverGreen wraps `getHWInfo` and replaces the PID with the `codec-device-id` property, falling back
+  to `device-id` — log line: `rad: getHWInfo: original PID: 0x6987, replaced PID: 0x67FF`.
+  (`getOSData codec-device-id was not found` is harmless because of that fallback.)
+- Everything lives in [`acpi-src/SSDT-RX640-CODEC.dsl`](acpi-src/SSDT-RX640-CODEC.dsl) (connectors + `device-id` + `no-gfx-spoof`),
+  which replaces `SSDT-RX640-CONNECTORS.aml`. The injector in `/Library/Extensions` stays as is.
+- Result: Metal unchanged, display on FB0, `system_profiler` shows `Device ID: 0x67ff` / `Revision ID: 0x00c1`.
+  Measured on the Core 2 Duo: 600-frame 1080p → HEVC in **29 s** with `VTEncoderXPCService` ~0% CPU (software HEVC would
+  take minutes); HEVC playback smooth, `VTDecoderXPCService` 1–3% CPU.
+- Measure yourself: `time avconvert --source clip.mp4 -o out.mov -p PresetHEVC1920x1080 --replace`
+  (use an HEVC source for the H.264 test, otherwise avconvert just passes H.264 through), or double-click
+  [`scripts/Test-RX640-Video.command`](scripts/Test-RX640-Video.command) with a clip named `rx640-test-clip.mp4` next to it.
+

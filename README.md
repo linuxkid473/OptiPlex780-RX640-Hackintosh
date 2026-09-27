@@ -114,7 +114,8 @@ Full story, all failed experiments and exact log signatures: **[AGENT_PLAYBOOK.m
 ## Status / TODO
 
 - [x] Monterey 12.6.7, Metal acceleration, 1080p60 30-bit on DP
-- [x] Ethernet (IP via DHCP), audio kexts loaded, USB
+- [x] Ethernet (IP via DHCP), USB
+- [x] Audio via **VoodooHDA in `/Library/Extensions`** (AppleALC didn't attach; see playbook §10)
 - [ ] Switch Lilu/WhateverGreen back to RELEASE and drop `-liludbgall liludump=90`
 - [x] OpenDuet + OpenCore on the internal disk — boots without the USB ([`scripts/install_internal.sh`](scripts/install_internal.sh); **never mark the protective MBR active**, see playbook §9)
 - [ ] Sleep/wake: the RX 640 did **not** survive S3 on Mojave (`ATIController failed to access PCI device`) — untested on Monterey

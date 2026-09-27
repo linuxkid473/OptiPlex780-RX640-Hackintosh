@@ -174,3 +174,22 @@ dd if=/tmp/s of=/dev/rdisk0 bs=512 count=1
 ```
 Also: raw devices (`/dev/rdiskN`) only allow whole-sector I/O — `dd bs=1`/`bs=440` reads return nothing, so always read
 a full 512-byte sector into a file and inspect the file.
+
+## 10. Audio on Monterey (ADI codec, speakers on the rear headphone/line-out jack)
+
+- **AppleALC (`alcid=11`) did not work**: AppleALC loaded, but `AppleHDAController` never attached to `HDEF`
+  (`ioreg -r -n HDEF` shows no children, `system_profiler SPAudioDataType` shows no devices). IRQs were not the cause —
+  the patched DSDT already has the HPET (IRQ 0/8) / RTC fixes and AppleHPET/AppleRTC load.
+- **VoodooHDA injected by OpenCore silently does nothing on Big Sur+**: it links against `com.apple.iokit.IOAudioFamily`,
+  which lives in the System KC; OpenCore-injected kexts can only link against the Boot KC.
+- **Working fix: VoodooHDA 2.9.2 in `/Library/Extensions` (Auxiliary KC)**, AppleALC + OC's VoodooHDA entry disabled:
+  ```bash
+  sudo cp -R VoodooHDA.kext /Library/Extensions/ && sudo chown -R root:wheel /Library/Extensions/VoodooHDA.kext
+  sudo chmod -R 755 /Library/Extensions/VoodooHDA.kext
+  sudo kmutil load -p /Library/Extensions/VoodooHDA.kext
+  #  -> "Extension ... not approved to load. Please approve using System Preferences."
+  ```
+  Then **System Preferences → Security & Privacy → General → Allow** (on the machine itself), restart, pick the output in
+  Sound preferences. Codeless kexts (like RX640Injector) don't need this approval; kexts with an executable do, even with
+  `csr-active-config 0x203`.
+- Final internal-EFI boot-args: `keepsyms=1 debug=0x100 agdpmod=pikera -liludbgall liludump=90` (no `-v`, no `alcid`).

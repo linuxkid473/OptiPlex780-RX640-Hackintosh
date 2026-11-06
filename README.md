@@ -8,6 +8,9 @@ fully accelerated (`Metal: Supported`, 4 GB VRAM, Metal compositor) — a combin
 - **RX 640 = device `0x6987` rev `C1` ("POLARIS23")** → not supported by any macOS; the usual `0x67FF` spoof makes the
   display work but **breaks the accelerator** (`CAIL_ASICSetup() failed`)
 
+> **Also works on macOS High Sierra 10.13.6 with full acceleration** → [`HIGH_SIERRA.md`](HIGH_SIERRA.md)
+> (including the discovery that OCLP's AAAMouSSE hooks the wrong kernel-table slot on xnu-4570 and a 3-byte fix).
+
 The working answer is: **keep the real device-id**, add `0x6987` to Apple's AMD driver matching with a codeless
 **injector kext loaded from `/Library/Extensions` (Auxiliary KC)**, and let **WhateverGreen reorder the connectors**
 so the display runs on display pipe 0.
@@ -58,6 +61,8 @@ WhateverGreen rad: getConnectorsInfo installed 3 connectors
 | Path | What |
 |---|---|
 | [`EFI-internal-final/`](EFI-internal-final) | **⭐ The final EFI, copied off the machine's internal ESP.** Real ID + injector, connector reorder, `SSDT-RX640-CODEC` (hardware encode/decode), VoodooHDA audio, no `-v`. The `config.plist.before-*` files are the step-by-step backups. SMBIOS redacted. |
+| [`EFI-HighSierra/`](EFI-HighSierra) | **⭐ macOS High Sierra 10.13.6 — fully GPU-accelerated (Metal, 4 GB, 1080p60)**, verified on the machine. Stage-1 config (safe VESA) + stage-2 config (real ID + High-Sierra-built injector + connector SSDT + **AAAMouSSE patched for xnu-4570**). Full recipe and root-cause write-up: [`HIGH_SIERRA.md`](HIGH_SIERRA.md). Scripts: [`make_usb_highsierra.sh`](scripts/make_usb_highsierra.sh), [`make_highsierra_bundle.sh`](scripts/make_highsierra_bundle.sh), [`patch_mousse_highsierra.py`](scripts/patch_mousse_highsierra.py), [`highsierra/`](scripts/highsierra). |
+| [`extras/AAAMouSSE-orig/`](extras/AAAMouSSE-orig) | The stock AAAMouSSE 0.95 (OCLP) that the High Sierra patch starts from. |
 | [`EFI-USB-working/`](EFI-USB-working) | The recovery USB's EFI (first working acceleration config: verbose boot, AppleALC, no codec spoof). SMBIOS redacted. |
 | [`extras/RX640Injector-Monterey-LE.kext`](extras/RX640Injector-Monterey-LE.kext) | **The key piece.** Install to `/Library/Extensions` (see step 6). Built from Monterey 12.6.7's own AMD personalities. |
 | [`acpi-src/`](acpi-src) | SSDT sources (`.dsl`) + compiled `.aml`: connector reorder, the various spoof attempts, decompiled patched Dell DSDT |

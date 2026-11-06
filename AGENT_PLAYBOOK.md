@@ -214,3 +214,23 @@ VideoToolbox hardware encoder. The classic fix — spoof to `0x67FF` + `-radcode
   (use an HEVC source for the H.264 test, otherwise avconvert just passes H.264 through), or double-click
   [`scripts/Test-RX640-Video.command`](scripts/Test-RX640-Video.command) with a clip named `rx640-test-clip.mp4` next to it.
 
+
+## 12. High Sierra (10.13.6) — acceleration works; what we learned (details: [HIGH_SIERRA.md](HIGH_SIERRA.md))
+
+- **Correction to §1/§5a:** High Sierra's AMD kexts *do* contain four `0x67FF1002` personalities; with the **real `0x6987`**
+  retargeted via an injector built from *its own* kexts the chip initialises and Metal runs. No spoof, no `CAIL` failure.
+- **SIP:** `kextcache -i /` says `Untrusted kexts are not allowed … (-67062) denied` with `csr-active-config 0`; `0x67` → `allowed`.
+- **Crash-loop signature** with the injector active and no working SSE4.2 emulation:
+  `WindowServer … Illegal instruction: 4`, report: `EXC_BAD_INSTRUCTION (SIGILL)` in
+  `AMDRadeonX4000GLDriver glrATI_SI_InitMiscTextureInfo + 180` = `pcmpgtq` (SSE4.2). Only 18 SSE4.2 instructions exist in the whole
+  Polaris userland (GL 8, AMDSharedIL 7, MTLBronze 3), none in the kernel kexts.
+- **AAAMouSSE 0.95 is broken on xnu-4570:** it hooks `idt64_hndl_table0 + 0x40`, which is `hndl_unix_scall` there; the #UD handler
+  `hndl_alltraps` is at `+0x28`. Symptom: kext loads, logs "attempting #UD hook", a `pcmpgtq` test program dies 40/40 (1 or 2 CPUs).
+  Fix: patch the displacement `0x40→0x28` at file offsets `0x254b/0x25d5/0x25e4` ([`scripts/patch_mousse_highsierra.py`](scripts/patch_mousse_highsierra.py)).
+  Method to find this kind of thing: crash report → image UUID → extract the exact binary from the installer's `Core.pkg`
+  (xar + pbzx) → `otool -tvV` at `rip - base`; kernel symbols with `nm` (`keepsyms=1` also lets MouSSE look them up).
+- **Baked cache pitfall:** `kextcache -i` puts `/Library/Extensions` personalities into `prelinkedkernel`; a bad injector stays active even
+  in safe mode (`-x`) and leaves the display on the text console though `loginwindow` runs. Remove it from the installer Terminal and rebuild.
+- **Logs on High Sierra:** OpenCore file logging was empty on OpenDuet; `system.log` has no kernel lines; use `log show --last boot` and the
+  installed system's `/Library/Logs/DiagnosticReports` (readable from the installer's Terminal).
+- **Purple tint** with a working picture = Dell monitor *Input Color Format*, not a GPU problem (YPbPr fixed it on High Sierra; RGB on Monterey).

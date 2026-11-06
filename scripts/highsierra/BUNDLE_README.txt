@@ -23,3 +23,12 @@ Full background and reasons: HIGH_SIERRA.md in the repo.
 
 If it hangs / black / WindowServer crash-loop: boot the USB installer, Utilities > Terminal, run
 remove_injector_from_installer.sh (see its header), then restore config-stage1.plist as config.plist.
+
+GPU H.264 / HEVC HARDWARE DECODE (optional, after step 3 works)
+   ./hwdecode h264-1080p30.mp4        -> the REAL test: demands a GPU decoder ("hardware decoder created" + fps). Before the recipe it
+                                         fails with -12913; ./hwdecode h264-1080p30.mp4 auto shows what VideoToolbox picks by default.
+   ./vtcheck                          -> (weak, capability claim only; said YES on High Sierra even without a working decoder) shows "hardware decode: YES/no" for H.264 and HEVC (run it BEFORE and AFTER)
+   ./apply_codec.sh /Volumes/OPENCORE -> enables the "-radcodec" recipe (SSDT-RX640-CODEC + -radcodec boot arg); backs up the
+                                         config as config-before-codec.plist. Reboot, run ./vtcheck again.
+   Browsers only use it if they ask for H.264: YouTube serves VP9/AV1 to Chromium/Firefox-based browsers (software decode,
+   stutters on a Core 2 Duo). Use Safari, or force H.264 (h264ify-style extension) in the browser.

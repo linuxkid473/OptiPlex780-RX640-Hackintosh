@@ -4,6 +4,7 @@
 # It copies the EFI folder + `boot` from the USB's OPENCORE partition to the internal disk's EFI partition,
 # writes OpenDuet's boot1f32 to that partition's boot sector and boot0 to the MBR boot code (partition table untouched).
 # Needs LegacyBoot/{boot0,boot1f32,bootX64} next to this script. Override the disk with DISK=disk0 if detection is wrong.
+# Without the USB stick: SRC_EFI=<folder containing EFI/OC/config.plist> ./install_to_internal.sh
 # !!! Never mark the GPT protective-MBR entry active (playbook §9) - this script leaves the partition table alone.
 set -eu
 trap 'echo "FAILED at line $LINENO: $BASH_COMMAND"' ERR
@@ -21,12 +22,18 @@ diskutil info "$DISK" | grep -q GUID_partition_scheme || { echo "ABORT: $DISK is
 ESP="${DISK}s1"
 diskutil info "$ESP" | grep -q "EFI" || { echo "ABORT: $ESP is not the EFI partition"; exit 1; }
 diskutil info "$ESP" | grep -q "MS-DOS FAT32" || { echo "ABORT: $ESP is not FAT32"; exit 1; }
-OCID="$(diskutil list | awk '/ OPENCORE / {print $NF}' | head -1)"
-[ -n "$OCID" ] || { echo "ABORT: USB 'OPENCORE' partition not found (is the stick plugged in?)"; exit 1; }
-[ "$(val "$OCID" 'Part of Whole')" != "$DISK" ] || { echo "ABORT: OPENCORE is on the internal disk already"; exit 1; }
-sudo diskutil mount "$OCID" >/dev/null 2>&1 || true
-UM="$(val "$OCID" 'Mount Point')"
-[ -f "$UM/EFI/OC/config.plist" ] || { echo "ABORT: no EFI/OC/config.plist on $OCID"; exit 1; }
+if [ -n "${SRC_EFI:-}" ]; then
+  # source EFI from a folder (no USB needed): SRC_EFI=<dir containing EFI/OC/config.plist>
+  UM="$SRC_EFI"; OCID=""
+  [ -f "$UM/EFI/OC/config.plist" ] || { echo "ABORT: no EFI/OC/config.plist in $UM"; exit 1; }
+else
+  OCID="$(diskutil list | awk '/ OPENCORE / {print $NF}' | head -1)"
+  [ -n "$OCID" ] || { echo "ABORT: USB 'OPENCORE' partition not found (plug the stick in, or set SRC_EFI=<folder>)"; exit 1; }
+  [ "$(val "$OCID" 'Part of Whole')" != "$DISK" ] || { echo "ABORT: OPENCORE is on the internal disk already"; exit 1; }
+  sudo diskutil mount "$OCID" >/dev/null 2>&1 || true
+  UM="$(val "$OCID" 'Mount Point')"
+  [ -f "$UM/EFI/OC/config.plist" ] || { echo "ABORT: no EFI/OC/config.plist on $OCID"; exit 1; }
+fi
 
 echo "Internal disk : $DISK  ($(val "$DISK" 'Device / Media Name'), $(val "$DISK" 'Disk Size' | cut -d'(' -f1))"
 echo "EFI partition : $ESP  <- will be overwritten with the EFI from $UM"

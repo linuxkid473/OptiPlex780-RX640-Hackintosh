@@ -112,6 +112,37 @@ The desktop rendered but purple: the Dell SE2717H interpreted the DisplayPort co
 *Color → Input Color Format* → switching it to **YPbPr** fixed it here (the Monterey notes fixed the same symptom with RGB — try the
 other option). It is a monitor setting, not a GPU problem.
 
+## Hardware H.264 decode (the Monterey `-radcodec` recipe works on High Sierra too)
+
+Out of the box the accelerated GPU does **not** decode video: `VTIsHardwareDecodeSupported(H.264)` says YES (it is only a capability
+claim), but a session that *requires* a hardware decoder fails with `-12913` (`kVTCouldNotFindVideoDecoderErr`) and VideoToolbox decodes in
+software (`UsingHardwareAcceleratedVideoDecoder: no`). The video engine (`AMDRadeonX4000_AMDAccelVideoContext::getHWInfo`, present in
+10.13.6) doesn't know PID `0x6987`. Fix = same as Monterey:
+
+- `SSDT-RX640-CODEC.aml` (replaces `SSDT-RX640-CONNECTORS.aml`): same connector reorder + a `device-id` *property* `0x67FF` + `no-gfx-spoof`
+  (WhateverGreen then doesn't spoof PCI config space, so CAIL still reads the real `0x6987`)
+- boot-arg `-radcodec` (WhateverGreen replaces the PID seen by the video engine)
+
+Apply on the machine: `scripts/highsierra/apply_codec.sh /Volumes/<EFI>` (backs up `config-before-codec.plist`; reboot).
+Result on the OptiPlex (1080p30 High-profile H.264, 300 frames): `./hwdecode clip.mp4` **creates a hardware decoder, 198–330 fps**
+(was: fails); `system_profiler` then shows `Device ID: 0x67ff`, Metal still `Supported`. HEVC hardware decode stays `no` on 10.13 (irrelevant).
+
+Tools: [`scripts/highsierra/hwdecode.m`](scripts/highsierra/hwdecode.m) (modes: default = require hardware, `enable` = ask for hardware like
+browsers do, `auto` = no preference — VideoToolbox's default on 10.13 is **software**, so apps must request hardware; Safari/AVFoundation
+and Chromium do) and `vtcheck.c`. Build recipe and the CoreMedia/Swift-overlay gotcha are in `scripts/make_highsierra_bundle.sh`.
+
+**Browsers:** YouTube serves VP9/AV1 to Chromium/Firefox-based browsers; on a Core 2 Duo that is decoded in software and stutters regardless
+of the GPU. The GPU only helps if the page plays H.264 (Safari does; elsewhere use an H.264-forcing extension).
+
+## Booting without the USB (internal disk)
+
+`scripts/highsierra/install_to_internal.sh` copies `EFI/` + `boot` to the internal EFI partition and writes OpenDuet's `boot1f32` (PBR)
+and `boot0` (MBR boot code, partition table untouched; never mark the protective MBR active). Without the stick:
+`SRC_EFI=<folder with EFI/OC/config.plist> ./install_to_internal.sh` (e.g. an EFI built on another Mac and `scp`'d over). It backs up
+sector 0 and the old EFI contents to `~/ESP-backup-<date>` and verifies every write. After it: shut down, unplug the stick, boot.
+OpenCore does not need the stick once macOS is running — a machine booted from the stick keeps running after you unplug it, but would
+not reboot, so check `ls /Volumes/EFI/EFI/OC` after `sudo diskutil mount disk0s1` before trusting it.
+
 ## Debugging notes (what did and didn't work for getting logs)
 
 - OpenCore file logging (`Misc > Debug > Target = 67`) wrote **empty** `opencore-*.txt` files on OpenDuet's FAT32 — don't rely on it.
@@ -129,4 +160,4 @@ other option). It is a monitor setting, not a GPU problem.
 - **`kextcache -i /` is slow** on a Core 2 Duo (minutes) — don't interrupt it.
 - **SMBIOS:** `iMacPro1,1` (the model Metal worked with here). `iMac10,1` would give native Penryn power management but is untested with this GPU.
 - **Audio:** AppleALC `alcid=11` is configured but untested here; the VoodooHDA entry (disabled) works on High Sierra when injected by OpenCore.
-- **Not covered:** sleep/wake, mini-DisplayPort outputs, hardware video encode/decode (the Monterey `-radcodec` recipe is untested on 10.13).
+- **Not covered:** sleep/wake, mini-DisplayPort outputs, hardware video *encode* (H.264 decode verified, see above).

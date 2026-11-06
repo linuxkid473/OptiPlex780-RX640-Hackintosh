@@ -234,3 +234,9 @@ VideoToolbox hardware encoder. The classic fix — spoof to `0x67FF` + `-radcode
 - **Logs on High Sierra:** OpenCore file logging was empty on OpenDuet; `system.log` has no kernel lines; use `log show --last boot` and the
   installed system's `/Library/Logs/DiagnosticReports` (readable from the installer's Terminal).
 - **Purple tint** with a working picture = Dell monitor *Input Color Format*, not a GPU problem (YPbPr fixed it on High Sierra; RGB on Monterey).
+- **High Sierra video decode:** `VTIsHardwareDecodeSupported` lies (YES without a decoder). Test by requiring hardware in a `VTDecompressionSession`
+  (`scripts/highsierra/hwdecode.m`): `-12913` before, hardware decoder + 200-330 fps after the `-radcodec` + `SSDT-RX640-CODEC` recipe (§11 works unchanged on 10.13.6).
+  VideoToolbox's default on 10.13 is software; apps must request hardware. Browsers still stutter if the site serves VP9/AV1.
+- **Remote work over SSH:** `sudo` needs a password you can't give a tool; mount the EFI with `sudo diskutil mount disk0s1` in a terminal where the user types
+  it — the FAT volume is then world-writable, so the config edits need no root. A machine booted from the USB keeps running after the stick is removed
+  (OpenCore isn't needed once macOS is up); verify the internal EFI actually contains `EFI/OC` before rebooting.

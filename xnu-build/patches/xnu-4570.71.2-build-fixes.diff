@@ -1,0 +1,187 @@
+diff --git a/bsd/kern/makekdebugevents.py b/bsd/kern/makekdebugevents.py
+index 73b2db4..33b5b20 100755
+--- a/bsd/kern/makekdebugevents.py
++++ b/bsd/kern/makekdebugevents.py
+@@ -1,38 +1,37 @@
+-#!/usr/bin/python
++#!/usr/bin/env python3
+ #
+ # This script scans the trace.codes file, containing a mapping of event id to
+ # event name for all events, and writes to stdout a C declaration for a table
+ # named kd_events[] or these mappings.
+ # Required to generate a header file used by DEVELOPMENT and DEBUG kernels.
++# (Python 3 port of Apple's Python 2 script; output is identical.)
+ #
+- 
+ import sys
+ import re
+ 
+ # we expect one arg specifying the path to the trace.codes file
+-if (len(sys.argv) < 2):
+-    exit(1)
++if len(sys.argv) < 2:
++    sys.exit(1)
+ trace_code_file = sys.argv[1]
+ 
+ # regular expression pattern to match <hex_id> <string>
+-id_name_pattern = re.compile('0x([0-9a-fA-F]+)\s+([^\s]*)')
++id_name_pattern = re.compile(r'0x([0-9a-fA-F]+)\s+([^\s]*)')
+ code_table = []
+ 
+ # scan file to generate internal table
+ with open(trace_code_file, 'rt') as codes:
+     for line in codes:
+-	m = id_name_pattern.match(line)
+-	if m:
+-            code_table += [(int(m.group(1),base=16), m.group(2))]
++        m = id_name_pattern.match(line)
++        if m:
++            code_table += [(int(m.group(1), base=16), m.group(2))]
+ 
+ # emit typedef:
+-print "typedef struct {"
+-print "        uint32_t   id;"
+-print "        const char *name;"
+-print "} kd_event_t;"
++print("typedef struct {")
++print("        uint32_t   id;")
++print("        const char *name;")
++print("} kd_event_t;")
+ # emit structure declaration and sorted initialization:
+-print "kd_event_t kd_events[] = {"
++print("kd_event_t kd_events[] = {")
+ for mapping in sorted(code_table, key=lambda x: x[0]):
+-        print "        {0x%x, \"%s\"}," % mapping
+-print "};"
+-
++    print("        {0x%x, \"%s\"}," % mapping)
++print("};")
+diff --git a/bsd/net/if_ipsec.c b/bsd/net/if_ipsec.c
+index 0984205..4ce7d15 100644
+--- a/bsd/net/if_ipsec.c
++++ b/bsd/net/if_ipsec.c
+@@ -385,7 +385,11 @@ ipsec_interface_needs_netagent(ifnet_t interface)
+ 		return (FALSE);
+ 	}
+ 
++#if IPSEC_NEXUS
+ 	return (pcb->ipsec_needs_netagent == true);
++#else
++	return (FALSE);
++#endif
+ }
+ 
+ static errno_t
+diff --git a/config/Private.x86_64.exports b/config/Private.x86_64.exports
+index 52902c4..f16c500 100644
+--- a/config/Private.x86_64.exports
++++ b/config/Private.x86_64.exports
+@@ -61,3 +61,10 @@ _register_copyout_shim
+ _getsegdatafromheader
+ _getsegbynamefromheader
+ __mh_execute_header
++__Z33IOSKCopyKextIdentifierWithAddressm
++_xcpm_bios_mbox_cmd_read
++_xcpm_bios_mbox_cmd_unsafe_read
++_xcpm_bios_mbox_cmd_write
++_xcpm_is_hwp_enabled
++_xcpm_mbox_lock
++_xcpm_mbox_unlock
+diff --git a/libkern/c++/OSKext.cpp b/libkern/c++/OSKext.cpp
+index feb99ab..01fe8ba 100644
+--- a/libkern/c++/OSKext.cpp
++++ b/libkern/c++/OSKext.cpp
+@@ -11921,3 +11921,15 @@ int OSKextGetUUIDForName(const char *name, uuid_t uuid)
+ 	return 1;
+ }
+ #endif
++
++/*
++ * Build compatibility stub. Apple's kernel exports this closed-source IOSkywalk helper; com.apple.iokit.IONetworkingFamily
++ * references it (only in a debug backtrace path, and it null-checks the result). Returning NULL = "no kext identified".
++ */
++OSString * IOSKCopyKextIdentifierWithAddress(unsigned long address);
++OSString *
++IOSKCopyKextIdentifierWithAddress(unsigned long address)
++{
++	(void)address;
++	return NULL;
++}
+diff --git a/osfmk/i386/locks_i386.c b/osfmk/i386/locks_i386.c
+index 0395847..7b86d83 100644
+--- a/osfmk/i386/locks_i386.c
++++ b/osfmk/i386/locks_i386.c
+@@ -2556,3 +2556,16 @@ kdp_rwlck_find_owner(__unused struct waitq * waitq, event64_t event, thread_wait
+ 	waitinfo->context = VM_KERNEL_UNSLIDE_OR_PERM(rwlck);
+ 	waitinfo->owner = 0;
+ }
++
++/*
++ * Build-toolchain compatibility: clang 10 lowers the 4-byte relaxed atomic load in ordered_load() (on the lock word)
++ * to a libcall, where the older clang that Apple used inlined it. On x86 an aligned 4-byte load is atomic, so provide the
++ * helper here; this also stops libclang_rt.cc_kext's spinlock-based __atomic_load_4 (needing OSSpinLockLock) from being linked.
++ */
++uint32_t __atomic_load_4(const volatile void *ptr, int memorder);
++uint32_t
++__atomic_load_4(const volatile void *ptr, int memorder)
++{
++	(void)memorder;
++	return *(const volatile uint32_t *)ptr;
++}
+diff --git a/osfmk/i386/pmCPU.c b/osfmk/i386/pmCPU.c
+index de55ad8..15b3470 100644
+--- a/osfmk/i386/pmCPU.c
++++ b/osfmk/i386/pmCPU.c
+@@ -999,3 +999,22 @@ void machine_track_platform_idle(boolean_t entry) {
+  		}
+  	}
+ }
++
++/*
++ * Build compatibility stubs. Apple's kernel exports these closed-source Intel XCPM (hardware P-state) entry points for
++ * com.apple.driver.pmtelemetry. This kernel is built from the public source, which lacks them. They are only meaningful on
++ * HWP-capable CPUs; reporting "HWP not enabled" keeps pmtelemetry from ever calling the mailbox functions.
++ */
++int xcpm_is_hwp_enabled(void);
++int xcpm_bios_mbox_cmd_read(void);
++int xcpm_bios_mbox_cmd_unsafe_read(void);
++int xcpm_bios_mbox_cmd_write(void);
++void xcpm_mbox_lock(void);
++void xcpm_mbox_unlock(void);
++
++int xcpm_is_hwp_enabled(void) { return 0; }
++int xcpm_bios_mbox_cmd_read(void) { return -1; }
++int xcpm_bios_mbox_cmd_unsafe_read(void) { return -1; }
++int xcpm_bios_mbox_cmd_write(void) { return -1; }
++void xcpm_mbox_lock(void) { }
++void xcpm_mbox_unlock(void) { }
+diff --git a/osfmk/x86_64/idt64.s b/osfmk/x86_64/idt64.s
+index 54a43ec..16f41e9 100644
+--- a/osfmk/x86_64/idt64.s
++++ b/osfmk/x86_64/idt64.s
+@@ -517,8 +517,8 @@ L_dispatch_64bit:
+ 	/*
+ 	 * Save segment regs - for completeness since theyre not used.
+ 	 */
+-	movl	%fs, R64_FS(%r15)
+-	movl	%gs, R64_GS(%r15)
++	movw	%fs, R64_FS(%r15)
++	movw	%gs, R64_GS(%r15)
+ 
+ 	/* Save general-purpose registers */
+ 	mov	%rax, R64_RAX(%r15)
+@@ -582,10 +582,10 @@ L_dispatch_U32: /* 32-bit user task */
+ 	/*
+ 	 * Save segment regs
+ 	 */
+-	movl	%ds, R32_DS(%r15)
+-	movl	%es, R32_ES(%r15)
+-	movl	%fs, R32_FS(%r15)
+-	movl	%gs, R32_GS(%r15)
++	movw	%ds, R32_DS(%r15)
++	movw	%es, R32_ES(%r15)
++	movw	%fs, R32_FS(%r15)
++	movw	%gs, R32_GS(%r15)
+ 
+ 	/*
+ 	 * Save general 32-bit registers

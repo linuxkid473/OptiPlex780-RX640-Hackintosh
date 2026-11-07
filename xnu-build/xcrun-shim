@@ -1,0 +1,22 @@
+#!/bin/bash
+# Minimal xcrun shim: answers xnu's makefile queries from a copied old CommandLineTools (the modern xcrun can't load it).
+TC="${XNU_TC:?set XNU_TC}"; SDK="$TC/SDKs/MacOSX.sdk"
+find=""; show=""
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -sdk|--sdk|-toolchain|--toolchain) shift 2;;
+    -verbose|--verbose|-log|--log|-n|--no-cache|-k|--kill-cache) shift;;
+    -find|--find) find="$2"; shift 2;;
+    -show-sdk-path|--show-sdk-path) show=path; shift;;
+    -show-sdk-platform-path|--show-sdk-platform-path) show=platform; shift;;
+    -show-sdk-version|--show-sdk-version) show=version; shift;;
+    *) break;;
+  esac
+done
+lookup() { for d in "$TC/usr/bin" "$TC/usr/libexec" "$(dirname "$0")"; do [ -x "$d/$1" ] && { echo "$d/$1"; return 0; }; done
+           case "$1" in flex|bison|gm4|codesign_allocate|python|python2) [ -x "/usr/bin/$1" ] && { echo "/usr/bin/$1"; return 0; };; esac; return 1; }
+if [ -n "$show" ]; then
+  case "$show" in path) echo "$SDK";; version) /usr/libexec/PlistBuddy -c "Print :Version" "$SDK/SDKSettings.plist" 2>/dev/null || echo 10.14;; platform) exit 1;; esac; exit 0
+fi
+if [ -n "$find" ]; then lookup "$find" || { echo "xcrun(shim): unable to find utility \"$find\"" >&2; exit 1; }; exit 0; fi
+t="$(lookup "$1")" || { echo "xcrun(shim): unable to find utility \"$1\"" >&2; exit 1; }; shift; exec "$t" "$@"

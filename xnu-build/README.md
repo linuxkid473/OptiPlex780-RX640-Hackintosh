@@ -66,3 +66,8 @@ prelinked kernel was rebuilt (it is *compressed*, so grepping it for strings pro
 **Revert** from the running system: `bash ~/kernel-backup-<time>/restore_apple_kernel.sh`; if it won't boot: USB installer → Utilities → Terminal →
 `bash /Volumes/<hd>/Users/<you>/kernel-backup-<time>/restore_apple_kernel.sh /Volumes/<hd>`. `immutablekernel` (the iMac-Pro T2 cache) is left as Apple's; this setup booted from the
 rebuilt `prelinkedkernel`, so it is the one OpenCore uses here.
+
+## After Apple's Security Update 2020-005
+The update installs `xnu-4570.71.82.6` over `/System/Library/Kernels/kernel` and rebuilds the prelinked kernels, so the self-built kernel stops being the boot kernel (our `kernel.xnubuild` copy, `~/xnu-custom/kernel` and the Apple backup are untouched).
+The updated kernel has a different `idt64_hndl_table0` layout (`hndl_alltraps` at `+0x40`, not `+0x28`), so the *stock* AAAMouSSE must be used there — see [`HIGH_SIERRA.md`](../HIGH_SIERRA.md) and `scripts/highsierra/find_mousse_slot.py`.
+We did not rebuild against `71.82.6`: Apple only published source for the original 10.13.6 kernel (`xnu-4570.71.2`) — check before relying on it.

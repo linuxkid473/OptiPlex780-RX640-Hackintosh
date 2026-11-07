@@ -7,6 +7,10 @@ byte offset 0x40, which is `hndl_alltraps` on newer kernels - but on xnu-4570 of
 "hooks" fine and never sees the illegal instruction (user programs using pcmpgtq die with SIGILL; WindowServer crashes
 in AMDRadeonX4000GLDriver -> black screen).
 
+NOTE: this patched kext is only right for xnu-4570.71.2 (10.13.6 original / a self-built kernel). Apple's updated kernel
+xnu-4570.71.82.6 (Security Update 2020-005) has hndl_alltraps at +0x40 again, so use the STOCK kext there.
+Check with scripts/highsierra/find_mousse_slot.py <kernel>.
+
 The patch changes the displacement byte 0x40 -> 0x28 in the three instructions that touch the table:
     0x254b  movq %r11, 0x40(%r9)   (unhook)
     0x25d5  movq 0x40(%r9), %rbx   (save original entry)

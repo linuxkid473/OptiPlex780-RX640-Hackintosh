@@ -100,6 +100,19 @@ on 1 CPU as well as 2. MouSSE swaps an entry of the kernel's `idt64_hndl_table0`
 The patched kext is [`EFI-HighSierra/EFI/OC/Kexts/AAAMouSSE.kext`](EFI-HighSierra/EFI/OC/Kexts/AAAMouSSE.kext); the original is
 kept in [`extras/AAAMouSSE-orig/`](extras/AAAMouSSE-orig).
 
+**The right MouSSE depends on the exact kernel build** (found after Security Update 2020-005). Apple's updated kernel
+`xnu-4570.71.82.6` (same Darwin 17.7.0) has a re-ordered `idt64_hndl_table0`:
+
+| kernel | `hndl_alltraps` slot | AAAMouSSE to use |
+|---|---|---|
+| `xnu-4570.71.2` (10.13.6 original, and our self-built kernel) | `+0x28` | the **patched** kext (`EFI-HighSierra/...`) |
+| `xnu-4570.71.82.6` (after Security Update 2020-005) | `+0x40` | the **stock** kext ([`extras/AAAMouSSE-orig/`](extras/AAAMouSSE-orig)) |
+
+With the patched kext on the updated kernel it hooks `+0x28` (a different handler), MouSSE loads and logs normally, and WindowServer
+crash-loops again on the same `pcmpgtq` (`glrATI_SI_InitMiscTextureInfo + 180`) — black screen, SSH alive. Check a kernel with
+[`scripts/highsierra/find_mousse_slot.py`](scripts/highsierra/find_mousse_slot.py) `<kernel>`; swap the kext on the internal EFI with
+[`scripts/highsierra/use_stock_mousse.sh`](scripts/highsierra/use_stock_mousse.sh) (backs up the old kext + config.plist, asks for sudo).
+
 ### 4. "Stuck on the text console" after a failed injector run
 `kextcache -i /` bakes `/Library/Extensions` personalities into `prelinkedkernel`. After the crashing stage-2 boot the next
 boots (even safe mode `-x`, even `-radvesa`) reached `loginwindow` but never switched the display from the text console,
@@ -155,6 +168,9 @@ not reboot, so check `ls /Volumes/EFI/EFI/OC` after `sudo diskutil mount disk0s1
 
 ## Gotchas
 
+- **Software Update:** Security Update 2020-005 (and any update that reinstalls the kernel) replaces `/System/Library/Kernels/kernel` and the prelinked kernels, so a self-built kernel is lost
+  (`kernel.xnubuild` and the backup survive). The install runs as a second stage (OpenCore shows "macOS Installer" instead of the disk; the kext-cache rebuild takes ~20-40 min on this CPU; SSH is
+  unavailable then) and the first boot afterwards rebuilds caches again. Afterwards re-check the MouSSE slot (above).
 - **SATA:** "RAID Autodetect / AHCI" in the BIOS, otherwise no disk in macOS.
 - **SIP bits:** `0x67` is needed for the injector; with `0x00` the `kextcache` step silently drops it.
 - **`kextcache -i /` is slow** on a Core 2 Duo (minutes) — don't interrupt it.
